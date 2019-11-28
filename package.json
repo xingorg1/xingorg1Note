@@ -1,0 +1,52 @@
+{
+  "name": "xingorg1_note",
+  "version": "1.0.0",
+  "private": true,
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xingorg1/xingorg1Note"
+  },
+  "bugs": "https://github.com/xingorg1/xingorg1Note/issues",
+  "homepage": "https://github.com/xingorg1/xingorg1Note",
+  "scripts": {
+    "dev": "./node_modules/.bin/vuepress dev docs",
+    "serve": "npm run dev",
+    "build": "./node_modules/.bin/vuepress build docs",
+    "lint": "/node_modules/.bin/eslint src && stylelint 'src/**/*.less' && ./node_modules/.bin/eclint check",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "deploy": "bash deploy.sh"
+  },
+  "keywords": [
+    "小石头前端学习笔记"
+  ],
+  "author": {
+    "name": "xing.org1^",
+    "email": "xing.org1@outlook.com",
+    "url": "http://www.cnblogs.com/padding1015/"
+  },
+  "dependencies": {
+    "@vue/component-compiler-utils": "^3.0.2",
+    "@vuepress/plugin-back-to-top": "^1.1.0",
+    "busuanzi.pure.js": "^1.0.2",
+    "commander": "^2.20.0",
+    "esm": "^3.2.25",
+    "highlight.js": "^9.15.10",
+    "vuepress": "^1.0.0",
+    "vuepress-plugin-gotop-plus": "^1.0.0",
+    "vuepress-plugin-helper-live2d": "^1.0.0",
+    "vuepress-plugin-medium-zoom": "^1.1.2",
+    "vuepress-plugin-mygitalk": "^1.0.4",
+    "vuepress-plugin-sitemap": "^2.1.2",
+    "vuepress-theme-yilia-plus": "^1.0.0"
+  },
+  "devDependencies": {
+    "@vuepress/plugin-active-header-links": "^1.2.0",
+    "@vuepress/plugin-nprogress": "^1.2.0",
+    "gitalk": "^1.5.0",
+    "lodash": "^4.17.15"
+  }
+}

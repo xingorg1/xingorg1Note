@@ -1,0 +1,39 @@
+{
+  "title": "xingorg1的笔记本",
+  "description": "前端知识点笔记本",
+  "author": "xing.org1^",
+  "language": "zh-hans",
+  "root": ".",
+
+  "plugins": [
+    "donate",
+    "github-buttons@2.1.0",
+    "edit-link",
+    "github"
+  ],
+
+  "pluginsConfig": {
+    "github": {
+      "url": "https://github.com/xingorg1"
+    },
+    // "donate": {
+    //   "wechat": "https://www.xingorg1.com/images/wechatpay.jpg",
+    //   "alipay": "https://www.xingorg1.com/images/alipay.jpg",
+    //   "title": "",
+    //   "button": "打赏",
+    //   "alipayText": "支付宝打赏",
+    //   "wechatText": "微信打赏"
+    // },
+    "github-buttons": {
+      "repo": "xingorg1",
+      "types": [
+        "star"
+      ],
+      "size": "small"
+    },
+    "edit-link": {
+      "base": "",
+      "label": "Edit This Page"
+    }
+  }
+}
