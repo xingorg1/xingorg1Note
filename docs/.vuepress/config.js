@@ -24,45 +24,43 @@ module.exports = {
         text: '主页',
         link: '/'
       }, {
-        text: '技术笔记',
+        text: '前端',
         items: [{
-          text: '前端',
-          items: [{
-            text: 'html',
-            link: '/webNote/web/'
-          }, {
-            text: 'css',
-            link: '/webNote/css/'
-          }, {
-            text: 'js',
-            link: '/webNote/js/'
-          }, {
-            text: 'es',
-            link: '/webNote/es/'
-          }, {
-            text: 'vue',
-            link: '/webNote/vue/'
-          }, {
-            text: 'react',
-            link: '/webNote/react/'
-          }]
+          text: 'Html',
+          link: '/webNote/web/'
         }, {
-          text: '开发工具',
-          items: [{
-              text: 'gitbook',
-              link: '/webNote/gitbook/'
-            },
-            {
-              text: 'vuepress',
-              link: '/webNote/vuepress/'
-            }
-          ]
+          text: 'Css',
+          link: '/webNote/css/'
         }, {
-          text: '后端',
-          items: [{
-            text: 'python',
-            link: '/webNote/python/'
-          }]
+          text: 'JS',
+          link: '/webNote/js/'
+        }, {
+          text: 'ES',
+          link: '/webNote/es/'
+        }, {
+          text: 'Vue',
+          link: '/webNote/vue/'
+        }, {
+          text: 'React',
+          link: '/webNote/react/'
+        }]
+      }, {
+        text: '工具',
+        items: [{
+            text: 'GitBook',
+            link: '/devTools/gitbook/'
+          },
+          {
+            text: 'VuePress',
+            link: '/devTools/vuepress/'
+          }
+        ]
+      },
+      {
+        text: '后端',
+        items: [{
+          text: 'Python',
+          link: '/backEnd/python/'
         }]
       },
       {
@@ -141,9 +139,7 @@ module.exports = {
 
     /* vuepress-theme-yilia-plus 配置 */
     yilia_plus: {
-      github: { // github-corner(关闭请设置为false)
-        url: "https://github.com/JoeyBling/vuepress-theme-yilia-plus"
-      },
+      github: false,
       footer: {
         since: 2019, // 网站成立年份(若填入年份小于当前年份，则显示为 2018-2019 类似的格式)
         author: '<a href="https://github.com/xingorg1" target="_blank">xing.org1^ 小石头</a>', // 网站作者(关闭请设置为false)

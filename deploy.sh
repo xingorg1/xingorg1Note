@@ -38,6 +38,7 @@ cd -
 
 # 曲折的发布之路
 # 问题一：fatal: No remote repository specified.  Please, specify either a URL or a remote name from which new revisions should be fetched.
+
 # 问题二：
 # The authenticity of host 'github.com (52.74.223.119)' can't be established.
 # RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
@@ -52,3 +53,6 @@ cd -
 # fatal: Could not read from remote repository.
 
 # Please make sure you have the correct access rights
+
+# 警告一（在配置了git的ssh key以后提醒的）
+# Warning: Permanently added the RSA host key for IP address '192.30.253.112' to the list of known hosts.

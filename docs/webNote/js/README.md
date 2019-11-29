@@ -1,11 +1,12 @@
 ---
-description: js模块
+title: JS模块
+description: JS模块
 ---
 
-# js模块
+# JS模块
 
-平时用到的一些常见js模块记录笔记
+平时用到的一些常见JS模块记录笔记
 
-## 快捷入口 
+## 文档列表 
 
-[dom操作影响性能](performance-dom.md)
+- [dom操作影响性能](performance-dom.md)

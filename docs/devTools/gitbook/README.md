@@ -1,5 +1,5 @@
 # gitbookNote
-This is my note about gitbook。
+学习gitbook时的相关笔记
 
 
 ## gitbook安装教程

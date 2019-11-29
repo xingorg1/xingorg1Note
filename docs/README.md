@@ -35,5 +35,5 @@ xing.org1^ 小石头，三年前端从业经验。
 - [公众号]()
 - [个人项目](https://xingorg1.github.io/projectOfGjf/index.html)
 
-**越努力，越幸运。**
+> **越努力，越幸运。**
 

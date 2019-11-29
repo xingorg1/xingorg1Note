@@ -1,4 +1,4 @@
-# vue
+# Vue 学习笔记
 
 ## Project setup
 ```

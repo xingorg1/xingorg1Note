@@ -1,2 +1,1 @@
-# about me
-<img :src="$withBase('/logo.png')" alt="logo">
+# 关于我
