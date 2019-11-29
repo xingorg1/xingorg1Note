@@ -5,7 +5,7 @@ const {
 
 module.exports = {
   title: '小石头的前端学习笔记 ', // 设置网站标题
-  description: 'xing.org1^',
+  description: 'xing.org1^ 小石头的前端学习笔记汇总',
   base: '/xingorg1Note/', // 要部署的路径
   cache: false,
   head: [
@@ -123,7 +123,7 @@ module.exports = {
     // 侧边栏
     sidebar: 'auto',
     sidebarDepth: 5, //嵌套的标题链接深度，默认的深度为1（h1）。0 为禁用，2 为 h2，3 为 h3...
-    displayAllHeaders: false, // 默认值：false 侧边栏只会显示由当前活动页面的标题组成的链接
+    displayAllHeaders: true, // 默认值：false 侧边栏只会显示由当前活动页面的标题组成的链接
     activeHeaderLinks: true, // 默认值：true 滚动时通过 hash 高亮侧边栏标题
 
     // Git 仓库
@@ -135,7 +135,7 @@ module.exports = {
     editLinkText: '帮助我来改善此页面！', // 默认为 "Edit this page"
     docsDir: 'docs', // 编辑文档的所在目录
     docsBranch: 'develop', // 编辑文档的所在分支
-    lastUpdated: '最后更新：', // 最后更新时间
+    lastUpdated: '最后更新于', // 最后更新时间
 
     /* vuepress-theme-yilia-plus 配置 */
     yilia_plus: {
@@ -158,8 +158,7 @@ module.exports = {
       // 标题头有一个¶图标
       permalink: true,
       level: 1,
-      // permalinkSymbol: '&#187;'
-      permalinkSymbol: '&#x00BB;'
+      permalinkSymbol: '¶'
     },
     toc: {
       // 包含的层级

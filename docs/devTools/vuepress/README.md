@@ -95,5 +95,5 @@ npm i stylus stylus-loader -D
 ### deploy
 根据已经配置好的deploy.sh脚本，在项目根目录打开git base，如果是windows用户就可以直接运行：
 ``` bash
-npm run deploy "提交说明文案"
+npm run push "提交说明文案"
 ```
