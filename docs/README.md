@@ -1,7 +1,7 @@
 ﻿---
 home: true
 heroImage: ./images/logo.jpg
-heroText: 小石头的Electronic books
+heroText: 小石头的EBOOKS
 tagline: 宝剑锋从磨砺出，菊花香自苦寒来。
 actionText: 越努力 越幸运 →
 actionLink: /webNote/
@@ -36,11 +36,4 @@ xing.org1^ 小石头，三年前端从业经验。
 - [个人项目](https://xingorg1.github.io/projectOfGjf/index.html)
 
 **越努力，越幸运。**
-
-## -
-表格的写法o(*￣︶￣*)o
-
-| 1 | 2 |
-| :---: | :---: |
-| ![]() | ![]() |
 

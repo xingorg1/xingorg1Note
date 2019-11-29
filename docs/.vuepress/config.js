@@ -1,4 +1,7 @@
-const { fs, path } = require('@vuepress/shared-utils')
+const {
+  fs,
+  path
+} = require('@vuepress/shared-utils')
 
 module.exports = {
   title: '小石头的前端学习笔记 ', // 设置网站标题
@@ -115,24 +118,26 @@ module.exports = {
         }]
       }
     ],
+    //搜索
+    // search: true,
+    searchMaxSuggestions: 15, // 默认搜索框显示的搜索结果数量(内置搜索只会为页面的标题、h2 和 h3 构建搜索索引)
+
     // 侧边栏
     sidebar: 'auto',
-    // sidebar: {
-    //   '/api/': getApiSidebar(),
-    //   '/guide/': getGuideSidebar('Guide', 'Advanced'),
-    // },
-    sidebarDepth: 5, // 默认 1 提取到 h2，0 为禁用，2 为 h2，3 为 h3...
+    sidebarDepth: 5, //嵌套的标题链接深度，默认的深度为1（h1）。0 为禁用，2 为 h2，3 为 h3...
     displayAllHeaders: false, // 默认值：false 侧边栏只会显示由当前活动页面的标题组成的链接
     activeHeaderLinks: true, // 默认值：true 滚动时通过 hash 高亮侧边栏标题
 
-    // Git 仓库和编辑链接
+    // Git 仓库
     repo: 'xingorg1/xingorg1Note', // 你的仓库
     repoLabel: 'GitHub', // 导航栏上的文本
 
+    // 编辑链接
     editLinks: true,
-    editLinkText: '编辑此页面', // 默认为 "Edit this page"
+    editLinkText: '帮助我来改善此页面！', // 默认为 "Edit this page"
     docsDir: 'docs', // 编辑文档的所在目录
     docsBranch: 'develop', // 编辑文档的所在分支
+    lastUpdated: '最后更新：', // 最后更新时间
 
     /* vuepress-theme-yilia-plus 配置 */
     yilia_plus: {
@@ -146,10 +151,30 @@ module.exports = {
           enable: true // 是否启用(关闭请设置为false)
         }
       }
-    }
+    },
+
+    //////////  PWA配置 ///////////
+    // serviceWorker: true
   },
   markdown: {
-    lineNumbers: true // 代码块显示行号
+    lineNumbers: true, // 代码块显示行号
+    anchor: {
+      // 标题头有一个¶图标
+      permalink: true,
+      level: 1,
+      // permalinkSymbol: '&#187;'
+      permalinkSymbol: '&#x00BB;'
+    },
+    toc: {
+      // 包含的层级
+      includeLevel: [1, 2, 3, 4, 5],
+      // true表示在TOC中呈现所有标题
+      forceFullToc: true
+    },
+    // config: md => {
+    //   md.set({ breaks: true })
+    //   md.use(require('markdown-it-xxx'))
+    // }
   },
   plugins: [
     ['@vuepress/last-updated'], // 最后更新时间
@@ -172,16 +197,15 @@ module.exports = {
   }
 }
 
-function getApiSidebar () {
+function getApiSidebar() {
   return [
     'cli',
     'node'
   ]
 }
 
-function getGuideSidebar (groupA, groupB) {
-  return [
-    {
+function getGuideSidebar(groupA, groupB) {
+  return [{
       title: groupA,
       collapsable: false,
       children: [
@@ -208,16 +232,16 @@ function getGuideSidebar (groupA, groupB) {
     }
   ]
 }
-function getApiSidebar () {
+
+function getApiSidebar() {
   return [
     'cli',
     'node'
   ]
 }
 
-function getGuideSidebar (groupA, groupB) {
-  return [
-    {
+function getGuideSidebar(groupA, groupB) {
+  return [{
       title: groupA,
       collapsable: false,
       children: [
