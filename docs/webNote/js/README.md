@@ -6,4 +6,6 @@ description: js模块
 
 平时用到的一些常见js模块记录笔记
 
+## 快捷入口 
+
 [dom操作影响性能](performance-dom.md)

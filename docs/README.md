@@ -1,10 +1,17 @@
 ﻿---
 home: true
-heroImage: /images/logo.jpg
-heroText: 郭菊锋
-tagline: 小石头
+heroImage: ./images/logo.jpg
+heroText: 小石头的Electronic books
+tagline: 宝剑锋从磨砺出，菊花香自苦寒来。
 actionText: 越努力 越幸运 →
 actionLink: /webNote/
+slidebar: auto
+sidebarDepth: 5
+meta:
+  - name: description
+    content: 小石头的前端学习笔记
+  - name: keywords
+    content: 前端 学习 笔记 小石头 xing.org1^ HTML CSS JS VUE
 features:
 - title: 个人介绍
   details: 前端界的小学生~
