@@ -18,7 +18,7 @@
     "lint": "/node_modules/.bin/eslint src && stylelint 'src/**/*.less' && ./node_modules/.bin/eclint check",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "deploy": "bash deploy.sh"
+    "push": "bash deploy.sh"
   },
   "keywords": [
     "小石头前端学习笔记"
