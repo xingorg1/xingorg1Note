@@ -66,7 +66,7 @@ npm run push "git commit提交文案，不能有空格"
 
 ## 关于我
 
-xing.org1^  小石头，三年前端从业经验。
+xing.org1^ 小石头，三年前端从业经验。
 
 - [博客](http://www.cnblogs.com/padding1015/)
 - [GitHub](https://github.com/xingorg1)
