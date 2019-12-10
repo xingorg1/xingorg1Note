@@ -66,11 +66,7 @@ npm run push "git commit提交文案，不能有空格"
 
 ## 关于我
 
-<<<<<<< HEAD
 xing.org1^ 小石头，三年前端从业经验。
-=======
-xing.org1^  小石头，三年前端从业经验。
->>>>>>> master
 
 - [博客](http://www.cnblogs.com/padding1015/)
 - [GitHub](https://github.com/xingorg1)
@@ -79,16 +75,6 @@ xing.org1^  小石头，三年前端从业经验。
 
 ![公众号](https://xingorg1.github.io/xingorg1Note/images/qdsb_qrcode.gif)
 
-<<<<<<< HEAD
-## 待优化点
-
-:white_check_mark: 滚动条与主题插件  
-:o: sidebar 侧边栏  
-:o: 上下翻页  
-:o: 评论功能
-
-=======
->>>>>>> master
 ## -
 
 > **:woman_technologist: 越努力，越幸运。**
