@@ -1,6 +1,6 @@
 ﻿---
 home: true
-heroImage: ./images/logo.jpg
+heroImage: ./images/cover.jpg
 heroText: 小石头的EBOOKS
 tagline: 宝剑锋从磨砺出，菊花香自苦寒来。
 actionText: 越努力 越幸运 →
@@ -57,21 +57,23 @@ npm run push "git commit提交文案，不能有空格"
 
 <!-- ![xing.org1^](./images/logo.jpg) -->
 
-## 关于我
-
-xing.org1^ 小石头，三年前端从业经验。
-
-- [博客](http://www.cnblogs.com/padding1015/)
-- [GitHub](https://github.com/xingorg1)
-- [公众号]()
-- [个人项目](https://xingorg1.github.io/projectOfGjf/index.html)
-
 ## 待优化点
 
 :white_check_mark: 滚动条与主题插件  
 :o: sidebar 侧边栏  
 :o: 上下翻页  
 :o: 评论功能
+
+## 关于我
+
+xing.org1^  小石头，三年前端从业经验。
+
+- [博客](http://www.cnblogs.com/padding1015/)
+- [GitHub](https://github.com/xingorg1)
+- [个人项目](https://xingorg1.github.io/projectOfGjf/index.html)
+- [公众号](https://xingorg1.github.io/xingorg1Note/images/qdsb_qrcode.gif)
+
+![公众号](https://xingorg1.github.io/xingorg1Note/images/qdsb_qrcode.gif)
 
 ## -
 
