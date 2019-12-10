@@ -1,15 +1,12 @@
----
-title: Vue+TS踩坑记录与方案总结
-description: Vue+TS 踩坑记录与方案总结
----
+# Vue+TS 踩坑记录与方案总结
 
-[[toc]]
+## 前言
 
 vue 和 TypeScript 结合的情况下，很多写法和我们平时的写法都不太一样，这里总结我项目开发过程中遇到的问题和问题的解决方案  
 **有些问题可能还没解决，欢迎各位大佬给与提点。**  
 另外，使用本文前可以先看[vue 官方文档关于 typescript 的使用讲解](https://cn.vuejs.org/v2/guide/typescript.html)
 
-# 整个 vue 项目的目录结构
+## 整个 vue 项目的目录结构
 
 - 大体用 vue-cli 创建的项目，结构基本不变。
 
@@ -82,7 +79,7 @@ declare module 'vue/types/vue' {
 
 ```
 
-# 全局组件注册
+## 全局组件注册
 
 注册
 
@@ -103,7 +100,7 @@ Vue.component("all-component", AllComponent);
 <all-component />
 ```
 
-# SFC 单 vue 文件组件的基本写法和结构
+## SFC 单 vue 文件组件的基本写法和结构
 
 一個简陋的 demo，展示 ts 下的 vue 文件中，对于相关功能的使用，重点关注`<Script>`里的代码
 
@@ -183,7 +180,7 @@ Vue.component("all-component", AllComponent);
 </style>
 ```
 
-# computed 计算属性的写法
+## computed 计算属性的写法
 
 ```js
 // 计算属性
@@ -192,7 +189,7 @@ get computedKey() {
 }
 ```
 
-# watch 监听器的使用
+## watch 监听器的使用
 
 ### 同一个 vue 页面中使用
 
@@ -257,7 +254,7 @@ export default class FuZuJian extends Vue {
 }
 ```
 
-# Watch 监听 store 中的数据改变
+## Watch 监听 store 中的数据改变
 
 主要思路是计算属性获取 state 里的数据，watch 再监听计算属性
 
@@ -285,7 +282,7 @@ watchMenuState(val) { // 这里可以这么写：或用watch+上边括号里的�
 }
 ```
 
-# vue+ts 中，使用 filter 过滤器
+## vue+ts 中，使用 filter 过滤器
 
 定义：（在@Component 里边，写 filters，注意 s 单词）
 
@@ -315,13 +312,13 @@ watchMenuState(val) { // 这里可以这么写：或用watch+上边括号里的�
 <span v-if="showSpan">{{showValue | filterValue}}</span>
 ```
 
-# 自定义指令 过滤器【待补充】
+## 自定义指令 过滤器【待补充】
 
 ```js
 // 待补充
 ```
 
-# watch 监听 router 的变化
+## watch 监听 router 的变化
 
 1、shims-vue.d.ts 的设置
 
@@ -391,7 +388,7 @@ routeWatch() {
 }
 ```
 
-# main.ts 中注册路由导航守卫并在组件中使用路由钩子函数
+## main.ts 中注册路由导航守卫并在组件中使用路由钩子函数
 
 基本同上  
 1、shims-vue.d.ts 的设置
@@ -452,7 +449,7 @@ Component.registerHooks([
 </script>
 ```
 
-# 父子传值 - 子组件修改触发父组件的方法执行
+## 父子传值 - 子组件修改触发父组件的方法执行
 
 **父组件内部：**  
 1、调用子组件、并绑定传值：
@@ -480,7 +477,7 @@ export default class Menu extends Vue {
 
 最后还有另一种网友总结很麻烦的写法：[参见地址](https://blog.csdn.net/weixin_43713680/article/details/86708415)
 
-# @Prop 默认参数
+## @Prop 默认参数
 
 第一种：github 找到的 demo 这样。如下代码中`hideHeader`就是由默认参数的父组件传过来的属性
 
@@ -510,13 +507,13 @@ export default class ComponentName extends Vue {
 })
 ```
 
-# 中央总线注册与使用
+## 中央总线注册与使用【待解决】
 
 ```js
 // 待解决
 ```
 
-# vue + ts 中使用 vue-echarts
+## vue + ts 中使用 vue-echarts
 
 安装
 
@@ -568,7 +565,7 @@ SFC 应用
 <v-chart :options="echartsOptions" id="myCharts" ref="myCharts" />
 ```
 
-# vue + ts 中使用 Element-ui
+## vue + ts 中使用 Element-ui
 
 ```js
 // main.ts
@@ -576,7 +573,7 @@ import ElementUI from "element-ui";
 Vue.use(ElementUI);
 ```
 
-# 全局 scss 变量
+## 全局 scss 变量
 
 在 assets/styles 下新建\_variable.scss 文件，用于存放 scss 变量。  
 然后再 vue.config.js 中设置全局变量
@@ -596,7 +593,7 @@ module.exports = {
 };
 ```
 
-# alias 别名设置
+## alias 别名设置
 
 同时解决问题`alias 配置的路径别名，在 vscode 中报错模块查找失败`和问题`vue-cli 配置了 resolve alias 来声明的路径别名，在引用了 ts 后，vscode 会报错不能识别、模块查找失败`。其中，vscode 报错在 win 环境还需要一个插件安装，解决方案见下边
 vue.config.js 配置
@@ -649,7 +646,7 @@ import MyError from "view/error/Error.vue";
 @import "css/_variable.scss";
 ```
 
-# 请求接口的代理设置
+## 请求接口的代理设置
 
 vue.config.js 配置
 
@@ -681,7 +678,7 @@ axios
   });
 ```
 
-# 本地服务域名修改
+## 本地服务域名修改
 
 vue.config.js 配置
 
@@ -715,9 +712,9 @@ package.json dev 命令的配置
 
 此时，`npm run dev`成功后，浏览器跑项目输入地址`http://www.haha.com`即可
 
-# vue + ts 在 vscode 中的问题
+## vue + ts 在 vscode 中的问题
 
-## vue-cli 配置了 resolve alias 来声明的路径别名，在引用了 ts 后，vscode 会报错不能识别、模块查找失败：
+### vue-cli 配置了 resolve alias 来声明的路径别名，在引用了 ts 后，vscode 会报错不能识别、模块查找失败：
 
 1、扩展商店安装插件 - Path Intellisense
 
