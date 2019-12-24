@@ -1,5 +1,5 @@
 
-# 错误类型
+# 错误类型与可能原因分析
 ## A、语法错误：
 ### 1、```syntaxError:invalid syntax```   
 无效的语法
