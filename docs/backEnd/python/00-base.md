@@ -29,9 +29,3 @@ print(name)
 * 不能以数字开头
 * 尽量做到语义化，描述包含的内容及其含义
 * 不要使用python函数名和关键字
-
-## 错误格式
-### A、语法错误：syntaxError:invalid syntax
-这通常是因为在python中用了中文符号造成的。  
-
-在Python中，默认所有正确的语法，包括标点符号都是【英文】。不小心用了中文标点的话，计算机会无法识别，然后报错syntaxError:invalid syntax（语法错误：无效语法）。
