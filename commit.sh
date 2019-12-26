@@ -1,5 +1,5 @@
 # 自动提交源码
-set -e
+# set -e
 
 git add .
 
