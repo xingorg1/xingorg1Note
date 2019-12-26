@@ -10,7 +10,7 @@ set -e
 git add .
 git commit -m $1
 git pull
-git push origin master
+git push
 
 # 生成静态文件
 npm run docs:build
