@@ -21,7 +21,10 @@
     "push": "bash deploy.sh"
   },
   "keywords": [
-    "小石头前端学习笔记"
+    "小石头",
+    "前端",
+    "note",
+    "vuepress"
   ],
   "author": {
     "name": "xing.org1^",

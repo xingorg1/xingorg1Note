@@ -4,7 +4,7 @@ const {
 } = require('@vuepress/shared-utils')
 
 module.exports = {
-  title: '小石头的前端学习笔记 ', // 设置网站标题
+  title: '小石头的笔记本 ', // 设置网站标题
   description: 'xing.org1^ 小石头的前端学习笔记汇总',
   base: '/xingorg1Note/', // 要部署的路径
   dest: './dist', // 打包后的dist存放路径，相对路径从根目录开始

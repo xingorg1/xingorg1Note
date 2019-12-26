@@ -9,7 +9,7 @@ slidebar: auto
 sidebarDepth: 5
 meta:
   - name: description
-    content: 小石头的前端学习笔记
+    content: 小石头的笔记本
   - name: keywords
     content: 前端 学习 笔记 小石头 xing.org1^ HTML CSS JS VUE
 features:
