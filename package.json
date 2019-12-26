@@ -18,7 +18,8 @@
     "lint": "/node_modules/.bin/eslint src && stylelint 'src/**/*.less' && ./node_modules/.bin/eclint check",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "push": "bash deploy.sh"
+    "push": "bash deploy.sh",
+    "commit": "bash commit.sh"
   },
   "keywords": [
     "小石头",

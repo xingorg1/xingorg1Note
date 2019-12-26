@@ -18,7 +18,7 @@ npm run docs:build
 # 进入生成的dist文件夹
 cd ./dist
 
-# git init
+git init
 git add -A
 git commit -m $1 # 提交到历史区，$1 为运行 sh 时的第一个参数
 
