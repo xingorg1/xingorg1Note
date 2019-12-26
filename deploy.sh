@@ -8,8 +8,11 @@ set -e
 
 # 源代码提交到 master 分支
 git add .
+
 git commit -m $1
+
 git pull
+
 git push
 
 # 生成静态文件
