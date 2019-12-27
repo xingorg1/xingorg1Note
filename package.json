@@ -18,10 +18,14 @@
     "lint": "/node_modules/.bin/eslint src && stylelint 'src/**/*.less' && ./node_modules/.bin/eclint check",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "push": "bash deploy.sh"
+    "push": "bash deploy.sh",
+    "commit": "bash commit.sh"
   },
   "keywords": [
-    "小石头前端学习笔记"
+    "小石头",
+    "前端",
+    "note",
+    "vuepress"
   ],
   "author": {
     "name": "xing.org1^",
