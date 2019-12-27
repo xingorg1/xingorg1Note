@@ -60,8 +60,8 @@ npm run push "git commit提交文案，不能有空格"
 ## 待优化点
 
 :white_check_mark: 滚动条与主题插件  
-:o: sidebar 侧边栏  
-:o: 上下翻页  
+:white_check_mark: sidebar 侧边栏  
+:white_check_mark: 上下翻页  
 :o: 评论功能
 
 ## 关于我

@@ -17,39 +17,41 @@ function getMenusChildren(address, site) {
 }
 module.exports = {
   getWebNoteSidebar(titleName) {
-    return [['', titleName],{
+    return [
+      ['', titleName],
+      {
         title: 'Html',
-        collapsable: false,
+        collapsable: true,
         children: getMenusChildren('../../webNote/web', 'web/')
       },
       {
         title: 'Css',
-        collapsable: false,
+        collapsable: true,
         children: getMenusChildren('../../webNote/css', 'css/')
       },
       {
         title: 'JavaScript',
-        collapsable: false,
+        collapsable: true,
         children: getMenusChildren('../../webNote/js', 'js/')
       },
       {
         title: 'ESMAScript 6',
-        collapsable: false,
+        collapsable: true,
         children: getMenusChildren('../../webNote/es', 'es/')
       },
       {
         title: 'Vue',
-        collapsable: false,
+        collapsable: true,
         children: getMenusChildren('../../webNote/vue', 'vue/')
       },
       {
         title: 'React',
-        collapsable: false,
+        collapsable: true,
         children: getMenusChildren('../../webNote/react', 'react/')
       },
       {
         title: '移动端',
-        collapsable: false,
+        collapsable: true,
         children: getMenusChildren('../../webNote/mobile', 'mobile/')
       }
     ]
@@ -58,21 +60,25 @@ module.exports = {
     return [
       'gitbook/',
       'vuepress/',
-      'github/'
+      {
+        title: 'github相关知识',
+        collapsable: true,
+        children: getMenusChildren('../../devTools/github', 'github/')
+      }
     ]
   },
   getBackEndSidebar() {
     return [{
       title: 'Python',
-      collapsable: false,
+      collapsable: true,
       children: getMenusChildren('../../backEnd/python', 'python/')
     },{
       title: 'MySQL',
-      collapsable: false,
+      collapsable: true,
       children: getMenusChildren('../../backEnd/MySQL', 'MySQL/')
     },{
       title: 'Java',
-      collapsable: false,
+      collapsable: true,
       children: getMenusChildren('../../backEnd/Java', 'Java/')
     }]
   },

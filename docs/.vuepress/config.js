@@ -22,13 +22,12 @@ module.exports = {
     nav: require('./configs/nav'),
     //搜索
     // search: true,
-    searchMaxSuggestions: 15, // 默认搜索框显示的搜索结果数量(内置搜索只会为页面的标题、h2 和 h3 构建搜索索引)
+    searchMaxSuggestions: 10, // 默认搜索框显示的搜索结果数量(内置搜索只会为页面的标题、h2 和 h3 构建搜索索引)
     smoothScroll: true,
 
     // 侧边栏
-    sidebar: 'auto',
     sidebarDepth: 1, //嵌套的标题链接深度，默认的深度为1（h1）。0 为禁用，2 为 h2，3 为 h3...
-    displayAllHeaders: true, // 默认值：false 侧边栏只会显示由当前活动页面的标题组成的链接
+    displayAllHeaders: false, // 默认值：false 侧边栏只会显示由当前活动页面的标题组成的链接
     activeHeaderLinks: true, // 默认值：true 滚动时通过 hash 高亮侧边栏标题
     sidebar: {
       '/webNote/': sidebarConf.getWebNoteSidebar('前端开发'),

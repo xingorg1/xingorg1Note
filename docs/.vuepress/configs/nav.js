@@ -22,6 +22,9 @@ module.exports = [{
     }, {
       text: 'React',
       link: '/webNote/react/'
+    }, {
+      text: '移动端',
+      link: '/webNote/mobile/'
     }]
   }, {
     text: '工具',
