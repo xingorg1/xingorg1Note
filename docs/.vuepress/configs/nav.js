@@ -40,6 +40,12 @@ module.exports = [{
     items: [{
       text: 'Python',
       link: '/backEnd/python/'
+    },{
+      text: 'MySQL',
+      link: '/backEnd/MySQL/'
+    },{
+      text: 'Java',
+      link: '/backEnd/Java/'
     }]
   },
   {

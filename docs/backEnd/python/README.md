@@ -1,4 +1,5 @@
-# Python 学习笔记和资料
+# 介绍
+Python
 
 ## 目录
 0. [Python基础知识](./00-base.md)

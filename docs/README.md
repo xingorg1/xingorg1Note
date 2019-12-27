@@ -1,10 +1,10 @@
 ﻿---
 home: true
 heroImage: ./images/cover.jpg
-heroText: 小石头的EBOOKS
+heroText: xing.org1^
 tagline: 宝剑锋从磨砺出，菊花香自苦寒来。
 actionText: 越努力 越幸运 →
-actionLink: /backEnd/python/
+actionLink: /webNote/
 slidebar: auto
 sidebarDepth: 5
 meta:

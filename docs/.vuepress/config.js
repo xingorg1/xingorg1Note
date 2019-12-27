@@ -1,8 +1,6 @@
-const {
-  fs,
-  path
-} = require('@vuepress/shared-utils')
 
+const sidebarConf = require('./configs/sidebar')
+console.log(sidebarConf)
 module.exports = {
   title: '小石头的笔记本 ', // 设置网站标题
   description: 'xing.org1^ 小石头的前端学习笔记汇总',
@@ -29,16 +27,17 @@ module.exports = {
 
     // 侧边栏
     sidebar: 'auto',
-    sidebarDepth: 5, //嵌套的标题链接深度，默认的深度为1（h1）。0 为禁用，2 为 h2，3 为 h3...
+    sidebarDepth: 1, //嵌套的标题链接深度，默认的深度为1（h1）。0 为禁用，2 为 h2，3 为 h3...
     displayAllHeaders: true, // 默认值：false 侧边栏只会显示由当前活动页面的标题组成的链接
     activeHeaderLinks: true, // 默认值：true 滚动时通过 hash 高亮侧边栏标题
     sidebar: {
-      '/webNote/': getWebNoteSidebar('HTML', 'CSS', 'JS', 'ES', 'VUE', 'React'),
-      '/devTools/': getDevToolsSidebar(),
-      '/backEnd/': getBackEndSidebar('Python'),
-      '/diarys/': getDiarysSidebar(),
-      '/photograph/': getPhotographSidebar(),
-      '/hobby/': getHobbySidebar()
+      '/webNote/': sidebarConf.getWebNoteSidebar('前端开发'),
+      '/devTools/': sidebarConf.getDevToolsSidebar(),
+      '/backEnd/': sidebarConf.getBackEndSidebar(),
+      '/diarys/': sidebarConf.getDiarysSidebar(),
+      '/photograph/': sidebarConf.getPhotographSidebar(),
+      '/hobby/': sidebarConf.getHobbySidebar(),
+      '/about/': sidebarConf.getAboutSidebar('关于我')
     },
 
     // Git 仓库
@@ -107,85 +106,3 @@ module.exports = {
   }
 }
 
-function getMenusChildren(address, site) {
-  const menusList = fs
-    .readdirSync(path.resolve(__dirname, address))
-    .map(filename => site + filename.slice(0, -3))
-    .sort()
-  return menusList
-}
-
-
-function getWebNoteSidebar(groupA, groupB, groupC, groupD, groupE, groupF) {
-  return [{
-      title: groupA,
-      collapsable: true,
-      children: getMenusChildren('../webNote/js', 'js/')
-    },
-    {
-      title: groupB,
-      collapsable: true,
-      children: getMenusChildren('../webNote/vue', 'vue/')
-    },
-    {
-      title: groupC,
-      collapsable: true,
-      children: getMenusChildren('../webNote/vue', 'vue/')
-    },
-    {
-      title: groupD,
-      collapsable: true,
-      children: getMenusChildren('../webNote/vue', 'vue/')
-    },
-    {
-      title: groupE,
-      collapsable: true,
-      children: getMenusChildren('../webNote/vue', 'vue/')
-    },
-    {
-      title: groupF,
-      collapsable: true,
-      children: getMenusChildren('../webNote/vue', 'vue/')
-    }
-  ]
-}
-
-function getDevToolsSidebar() {
-  return [
-    'gitbook/',
-    'vuepress/',
-    'github/'
-  ]
-}
-
-function getBackEndSidebar(groupA) {
-  return [{
-    title: groupA,
-    collapsable: true,
-    children: [''].concat(getMenusChildren('../backEnd/python', 'note/'))
-  }]
-}
-
-function getDiarysSidebar() {
-  return [
-    'diary/',
-    'essays/',
-    'creative/',
-    'novel/'
-  ]
-}
-
-function getPhotographSidebar() {
-  return [
-    'dailyLife/',
-    'scenery/'
-  ]
-}
-
-function getHobbySidebar() {
-  return [
-    'painting/',
-    'music/',
-    'movie/'
-  ]
-}

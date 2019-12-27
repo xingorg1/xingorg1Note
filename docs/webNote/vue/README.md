@@ -2,7 +2,7 @@
 
 ## 目录
 
-[1]. [vue+ts\_踩坑总结](./files/vue+ts_踩坑总结.md)
+[1]. [vue+ts\_踩坑总结](./vue+ts_踩坑总结.md)
 
 ## Project setup
 
