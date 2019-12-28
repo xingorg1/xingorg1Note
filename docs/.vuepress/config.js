@@ -1,6 +1,6 @@
 
 const sidebarConf = require('./configs/sidebar')
-console.log(sidebarConf)
+
 module.exports = {
   title: '前端说吧 ', // 设置网站标题
   description: 'xing.org1^ 小石头的前端学习笔记汇总',
