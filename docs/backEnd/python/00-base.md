@@ -29,3 +29,5 @@ print(name)
 * 不能以数字开头
 * 尽量做到语义化，描述包含的内容及其含义
 * 不要使用python函数名和关键字
+
+<Vssue title="Python 基础" />

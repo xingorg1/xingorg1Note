@@ -29,13 +29,17 @@ module.exports = [{
   }, {
     text: '工具',
     items: [{
-        text: 'GitBook',
-        link: '/devTools/gitbook/'
+      text: 'VuePress',
+      link: '/devTools/vuepress/'
+    },
+    {
+      text: 'GitBook',
+      link: '/devTools/gitbook/'
       },
       {
-        text: 'VuePress',
-        link: '/devTools/vuepress/'
-      }
+        text: 'GitHub',
+        link: '/devTools/github/'
+        }
     ]
   },
   {

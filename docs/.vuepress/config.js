@@ -2,7 +2,7 @@
 const sidebarConf = require('./configs/sidebar')
 console.log(sidebarConf)
 module.exports = {
-  title: '小石头的笔记本 ', // 设置网站标题
+  title: '前端说吧 ', // 设置网站标题
   description: 'xing.org1^ 小石头的前端学习笔记汇总',
   base: '/xingorg1Note/', // 要部署的路径
   dest: './dist', // 打包后的dist存放路径，相对路径从根目录开始
@@ -26,7 +26,7 @@ module.exports = {
     smoothScroll: true,
 
     // 侧边栏
-    sidebarDepth: 1, //嵌套的标题链接深度，默认的深度为1（h1）。0 为禁用，2 为 h2，3 为 h3...
+    sidebarDepth: 2, //嵌套的标题链接深度，默认的深度为1（h1）。0 为禁用，2 为 h2，3 为 h3...
     displayAllHeaders: false, // 默认值：false 侧边栏只会显示由当前活动页面的标题组成的链接
     activeHeaderLinks: true, // 默认值：true 滚动时通过 hash 高亮侧边栏标题
     sidebar: {
@@ -94,7 +94,29 @@ module.exports = {
         mobileShow: false,
         threshold: 50 // 回到页首元素显示触发的高度阈值(default: 50)
       }
-    ]
+    ],
+    ['@vssue/vuepress-plugin-vssue', {
+      // 设置 `platform` 而不是 `api`
+      platform: 'github-v4',
+      // 其他的 Vssue 配置
+      owner: 'xingorg1',
+      repo: 'xingorg1Note',
+      clientId: '134932d9ad76f640b86b',
+      clientSecret: '74bb86b147418449210c6419db204d75ed02b7b8',
+    }]
+    // [
+    //   'vuepress-plugin-comment',
+    //   {
+    //     choosen: 'valine', 
+    //     // options选项中的所有参数，会传给Valine的配置
+    //     options: {
+    //       el: '#valine-vuepress-comment',
+    //       appId: 'Your own appId',
+    //       appKey: 'Your own appKey',
+    //       visitor: true 
+    //     }
+    //   }
+    // ] // 评论工具
   ],
   configureWebpack: {
     resolve: {

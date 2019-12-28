@@ -1,3 +1,7 @@
+---
+title: gitbook
+---
+
 # gitbookNote
 学习gitbook时的相关笔记。
 

@@ -1,6 +1,6 @@
 ---
 title: 为什么操作DOM会影响网页性能？
-next: false
+# next: false
 ---
 
  <!-- [[toc]]  -->
@@ -175,3 +175,5 @@ DOM 操作基本就是画图形的，但浏览器中用的就是**家用 GPU，�
 ![控制台开启重绘检测按钮](./images/repaintSwitch.png "控制台开启重绘检测按钮")
 
 #### 各 css 属性对重排重绘的影响：https://csstriggers.com/
+
+<Vssue title="为什么操作DOM会影响网页性能？" />

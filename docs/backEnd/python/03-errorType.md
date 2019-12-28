@@ -79,3 +79,4 @@ print(xingorg1)
 # NameError: name 'xingorg1' is not defined
 ```
 
+<Vssue title="Python 错误类型与引起原因分析" />

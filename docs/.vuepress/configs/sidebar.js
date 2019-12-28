@@ -58,8 +58,8 @@ module.exports = {
   },
   getDevToolsSidebar() {
     return [
-      'gitbook/',
       'vuepress/',
+      'gitbook/',
       {
         title: 'github相关知识',
         collapsable: true,
