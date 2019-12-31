@@ -1,7 +1,7 @@
 # 自动化部署 
 # 输入命令“ npm run push "提交说明文案" ”（提交说明文案不能使用空格隔开（本人对 shell 脚本不熟悉，查找了也没明白，希望有大神指点一下），使用了空格，就会导致只提交了空格前的消息）
 # mac 用 sudo npm run push "没有空格的提交文案"
-# 如果报public key权限错误，先根目录下执行"base publickey.sh"脚本，然后再运行：sudo npm run push "没有空格的提交内容说明"
+# 如果报public key权限错误，先根目录下执行"bash publickey.sh"脚本，两次回车，通过后，然后再运行：sudo npm run push "没有空格的提交内容说明"
 #!/usr/bin/env sh
 
 # 确保脚本抛出遇到的错误
