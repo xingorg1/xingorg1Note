@@ -12,3 +12,68 @@ print('Today is',year,month,day)
 print(20.19)
 print(-12.25)
 print(520.1314 + 07.11)
+
+# 运算符
+print(20+19)
+# 39
+print(2020-1993)
+# 27
+print(20191231*20200101)
+# 407864905514331
+print(2020/10)
+# 202.0
+print(23%45)
+# 23
+print(2**3)
+# 8
+print(11//2)
+# 5
+
+# 字符串拼接
+a = '我'
+b = '叫'
+c = '小'
+d = '石'
+e = '头'
+
+print(a+b+c+d+e) # 我叫小石头
+
+# type
+name = '俺是字符串'
+value = 123
+flr = 12.4
+numberStr = '123'
+
+print(type(name))
+# <class 'str'>
+print(type(value))
+# <class 'int'>
+print(type(flr))
+# <class 'float'>
+print(type(numberStr))
+# <class 'str'>
+
+# str()
+who = '我'
+age = 18
+item = '岁'
+
+print(who+str(age)+item)
+# 我18岁
+print(who+'18'+item)
+
+# int
+num1 = '1'
+num2 = '8'
+print(int(num1)+int(num2))
+
+# int error
+# print(int('1.8'))
+# print(int(float('1.8')))
+# print(int('非整数数字字符串'))
+
+
+# float
+weight = 43.2
+print(float(weight))
+# 43.2

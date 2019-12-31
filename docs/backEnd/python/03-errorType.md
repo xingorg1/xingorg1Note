@@ -18,7 +18,7 @@ print(‘我左边的引号是中文的符号')
 #                       ^
 # SyntaxError: invalid character in identifier
 ```
-**出错场景：**
+**出错场景：**  
 这通常是因为在python中用了中文符号造成的。
 
 在Python中，默认所有正确的语法，包括标点符号都是【英文】。不小心用了中文标点的话，计算机会无法识别，然后报错。
@@ -38,7 +38,7 @@ print('我右边的引号是中文的符号‘)
 ## B、类型错误(数据类型不同导致): 
 ### ```TypeError: unsupported operand type(s) for ...```
 
-**出错场景：**
+**出错场景：**  
 不同类型的数据进行结合计算或处理，就会发生错误。
 ```py
 a = 1
@@ -71,7 +71,7 @@ print(str(a) + b)
 ## C、名称错误(变量未声明就使用): 
 ### ```NameError: name 'xingorg1' is not defined```
 
-**出错场景：**
+**出错场景：**  
 直接使用一个没有声明的变量，当在本作用域和全局作用域中找不到时，就会发生错误。
 ```py
 print(xingorg1)
@@ -79,4 +79,32 @@ print(xingorg1)
 # NameError: name 'xingorg1' is not defined
 ```
 
+## D、值异常
+### ```ValueError: invalid literal for int() with base 10: '1.8'```
+
+**出错场景：**  
+Python的语法规则，浮点类型的字符串不能使用int()函数进行强制转换。
+
+```py
+print(int('1.8'))
+#     print(int('1.8'))
+# ValueError: invalid literal for int() with base 10: '1.8'
+```
+**解决方案**  
+虽然浮点形式的字符串，不能使用int()函数。但浮点数是可以被int()函数强制转换的
+
+可以先将字符串转换为浮点类型，再将浮点数转换为int类型。如下：
+
+```py
+print(int(float('1.8')))
+# 1
+```
+
+不过对下面这种值异常的情况就无计可施了：
+```py
+print(int('非整数数字字符串'))
+#     print(int('非整数数字字符串'))
+# ValueError: invalid literal for int() with base 10: '非整数数字字符串'
+```
+纯文字类数据，无法转换为整数类型。
 <Vssue title="Python 错误类型与引起原因分析" />

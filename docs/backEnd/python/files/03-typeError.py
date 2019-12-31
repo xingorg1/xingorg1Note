@@ -18,4 +18,8 @@
 # # 11
 
 # nameError
-print(xingorg1)
+# print(xingorg1)
+
+# ValueError 值异常
+print(int('1.8'))
+print(int('非整数数字字符串'))

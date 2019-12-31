@@ -1,4 +1,3 @@
-
 const {
   fs,
   path
