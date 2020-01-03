@@ -846,4 +846,3 @@ module.exports = {
 ```
 
 <Vssue title="vue+ts踩坑总结" />
-````

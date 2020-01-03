@@ -63,8 +63,9 @@ npm run push "git commit提交文案，不能有空格"
 :white_check_mark: sidebar 侧边栏  
 :white_check_mark: 上下翻页  
 :white_check_mark: 评论功能  
-:o: 整体样式美化  
-:o: vue组件支持
+:white_check_mark: vue 组件支持
+:o: vue 主题模板文件
+:o: 整体样式美化
 
 ## 关于我
 
