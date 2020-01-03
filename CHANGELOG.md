@@ -4,6 +4,8 @@
 
 - **logo** 框架 logo
 - **component** vue 组件嵌入 markdown
+- **Google analytics** 插件安装与使用
+- **medium zoom** 图片自动缩放与查看
 
 ### Article
 

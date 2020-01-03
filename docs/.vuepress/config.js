@@ -95,7 +95,7 @@ module.exports = {
         threshold: 50 // 回到页首元素显示触发的高度阈值(default: 50)
       }
     ],
-    ['@vssue/vuepress-plugin-vssue', {
+    ['@vssue/vuepress-plugin-vssue', { // 评论功能
       // 设置 `platform` 而不是 `api`
       platform: 'github-v4',
       // 其他的 Vssue 配置
@@ -103,7 +103,14 @@ module.exports = {
       repo: 'xingorg1Note',
       clientId: '134932d9ad76f640b86b',
       clientSecret: '74bb86b147418449210c6419db204d75ed02b7b8',
-    }]
+    }],
+    [
+      '@vuepress/google-analytics', // 网站访客数据统计
+      {
+        'ga': 'UA-155302468-1'
+      }
+    ],
+    ['@vuepress/medium-zoom'] //图片缩放
     // [
     //   'vuepress-plugin-comment',
     //   {

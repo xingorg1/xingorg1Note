@@ -31,3 +31,5 @@ npm run push "git commit提交文案，不能有空格"
 ```
 
 [comment]: <> (# 声明：这里边的内容不会被显示出来？)
+
+[网站的数据统计地址](https://analytics.google.com/analytics/web/?authuser=0#/report-home/a155302468w219054088p208652917)
