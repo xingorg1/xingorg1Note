@@ -29,17 +29,17 @@ module.exports = [{
   }, {
     text: '工具',
     items: [{
-      text: 'VuePress',
-      link: '/devTools/vuepress/'
-    },
-    {
-      text: 'GitBook',
-      link: '/devTools/gitbook/'
+        text: 'VuePress',
+        link: '/devTools/vuepress/'
+      },
+      {
+        text: 'GitBook',
+        link: '/devTools/gitbook/'
       },
       {
         text: 'GitHub',
         link: '/devTools/github/'
-        }
+      }
     ]
   },
   {
@@ -47,10 +47,10 @@ module.exports = [{
     items: [{
       text: 'Python',
       link: '/backEnd/python/'
-    },{
+    }, {
       text: 'MySQL',
       link: '/backEnd/MySQL/'
-    },{
+    }, {
       text: 'Java',
       link: '/backEnd/Java/'
     }]
@@ -100,11 +100,11 @@ module.exports = [{
       text: '关于我',
       link: '/about/aboutMe/'
     }, {
-      text: '我的博客',
-      link: 'http://www.cnblogs.com/padding1015/'
-    }, {
       text: '与我联系',
       link: '/about/contact/'
+    }, {
+      text: '我的博客',
+      link: 'http://www.cnblogs.com/padding1015/'
     }]
   }
 ]
