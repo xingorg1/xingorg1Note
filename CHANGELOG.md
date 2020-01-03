@@ -1,5 +1,10 @@
 # [1.2.2](2020-01-03)
 
+### Features
+
+- **logo** 框架 logo
+- **component** vue 组件嵌入 markdown
+
 ### Article
 
 - **python:** Python 笔记整理 04 《if 语句》
@@ -7,6 +12,8 @@
 ### Bug Fixes
 
 - **win - vssue:** 评论功能
+
+- **vue:** vue+ts 踩坑总结
 
 # [1.2.1](2019-12-31)
 
