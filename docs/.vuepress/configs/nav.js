@@ -103,8 +103,17 @@ module.exports = [{
       text: '与我联系',
       link: '/about/contact/'
     }, {
-      text: '我的博客',
+      text: '博客园',
       link: 'http://www.cnblogs.com/padding1015/'
+    }, {
+      text: 'Github',
+      link: 'https://github.com/xingorg1'
+    }, {
+      text: 'NPM',
+      link: 'https://www.npmjs.com/~xing.org1'
+    }, {
+      text: '掘金',
+      link: 'https://juejin.im/user/58e704a02f301e0062343c10'
     }]
   }
 ]
