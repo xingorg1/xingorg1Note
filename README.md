@@ -27,7 +27,7 @@ npm run build
 自动发布：
 
 ```bash
-npm run push "git commit提交文案，不能有空格"
+npm run push "提交的说明文案，注意千万不能有空格"
 ```
 
 [comment]: <> (# 声明：这里边的内容不会被显示出来？)
