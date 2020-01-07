@@ -1,3 +1,9 @@
+# [1.2.3](2020-01-03)
+
+### Article
+
+- **python** Python VS JavaScript 区别比较
+
 # [1.2.2](2020-01-03)
 
 ### Features
