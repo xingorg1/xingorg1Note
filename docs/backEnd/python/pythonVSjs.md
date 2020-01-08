@@ -1,5 +1,6 @@
 ---
 title: Python与JS对比
+description: Python和JavaScript的对比语法和相似方法比较
 ---
 
 # Python VS Javascript 写法与用法大全表
