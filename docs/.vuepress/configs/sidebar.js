@@ -126,7 +126,7 @@ module.exports = {
       {
         title: '电影',
         collapsable: true,
-        children: getMenusChildren('../../hobby/movie', 'novel/')
+        children: getMenusChildren('../../hobby/movie', 'movie/')
       }
     ]
   },
