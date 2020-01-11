@@ -98,7 +98,7 @@ module.exports = [{
     text: '关于',
     items: [{
       text: '关于我',
-      link: '/about/aboutMe/'
+      link: '/about/'
     }, {
       text: '与我联系',
       link: '/about/contact/'

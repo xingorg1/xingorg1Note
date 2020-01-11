@@ -1,8 +1,8 @@
 ﻿---
 home: true
 heroImage: ./images/cover.jpg
-heroText: xing.org1^
-tagline: 宝剑锋从磨砺出，菊花香自苦寒来。
+heroText: 凌霜盛开 西风不落
+tagline: 宝剑锋从磨砺出, 菊花香自苦寒来
 actionText: 越努力 越幸运 →
 actionLink: /webNote/
 slidebar: auto

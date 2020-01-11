@@ -83,10 +83,26 @@ module.exports = {
   },
   getDiarysSidebar() {
     return [
-      'diary/',
-      'essays/',
-      'creative/',
-      'novel/'
+      {
+        title: '日记',
+        collapsable: true,
+        children: getMenusChildren('../../diarys/diary', 'diary/')
+      },
+      {
+        title: '随笔',
+        collapsable: true,
+        children: getMenusChildren('../../diarys/essays', 'essays/')
+      },
+      {
+        title: '奇特想法',
+        collapsable: true,
+        children: getMenusChildren('../../diarys/creative', 'creative/')
+      },
+      {
+        title: '小说',
+        collapsable: true,
+        children: getMenusChildren('../../diarys/novel', 'novel/')
+      }
     ]
   },
   getPhotographSidebar() {
@@ -97,9 +113,21 @@ module.exports = {
   },
   getHobbySidebar() {
     return [
-      'painting/',
-      'music/',
-      'movie/'
+      {
+        title: '绘画',
+        collapsable: true,
+        children: getMenusChildren('../../hobby/painting', 'painting/')
+      },
+      {
+        title: '音乐',
+        collapsable: true,
+        children: getMenusChildren('../../hobby/music', 'music/')
+      },
+      {
+        title: '电影',
+        collapsable: true,
+        children: getMenusChildren('../../hobby/movie', 'novel/')
+      }
     ]
   },
   getAboutSidebar(titleName) {

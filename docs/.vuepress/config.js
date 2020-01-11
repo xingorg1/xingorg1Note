@@ -30,7 +30,7 @@ module.exports = {
     displayAllHeaders: false, // 默认值：false 侧边栏只会显示由当前活动页面的标题组成的链接
     activeHeaderLinks: true, // 默认值：true 滚动时通过 hash 高亮侧边栏标题
     sidebar: {
-      '/webNote/': sidebarConf.getWebNoteSidebar('前端开发'),
+      '/webNote/': sidebarConf.getWebNoteSidebar('持续进步'),
       '/devTools/': sidebarConf.getDevToolsSidebar(),
       '/backEnd/': sidebarConf.getBackEndSidebar(),
       '/diarys/': sidebarConf.getDiarysSidebar(),
