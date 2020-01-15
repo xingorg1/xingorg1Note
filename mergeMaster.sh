@@ -1,5 +1,5 @@
 # develop 合并 master
-# 启动：bash mergeMaster.sh
+# git bash中启动：bash mergeMaster.sh
 # 确保脚本抛出遇到的错误
 set -e
 
