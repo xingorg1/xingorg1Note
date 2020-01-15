@@ -2,12 +2,13 @@ const {
   fs,
   path
 } = require('@vuepress/shared-utils')
+
 function getMenusChildren(address, site) {
   const menusList = []
-   fs.readdirSync(path.resolve(__dirname, address)) // 获取指定目录下的所有文件和文件夹名称列表
+  fs.readdirSync(path.resolve(__dirname, address)) // 获取指定目录下的所有文件和文件夹名称列表
     .filter(filename => {
-      if(filename.indexOf('.')>0){
-        let filesName = filename.slice(0, -3).replace('README','')
+      if (filename.indexOf('.') > 0) {
+        let filesName = filename.slice(0, -3).replace('README', '')
         menusList.push(site + filesName)
       }
     })
@@ -60,9 +61,14 @@ module.exports = {
       'vuepress/',
       'gitbook/',
       {
-        title: 'github相关知识',
+        title: 'github',
         collapsable: true,
         children: getMenusChildren('../../devTools/github', 'github/')
+      },
+      {
+        title: 'npm',
+        collapsable: true,
+        children: getMenusChildren('../../devTools/npm', 'npm/')
       }
     ]
   },
@@ -71,19 +77,18 @@ module.exports = {
       title: 'Python',
       collapsable: true,
       children: getMenusChildren('../../backEnd/python', 'python/')
-    },{
+    }, {
       title: 'MySQL',
       collapsable: true,
       children: getMenusChildren('../../backEnd/MySQL', 'MySQL/')
-    },{
+    }, {
       title: 'Java',
       collapsable: true,
       children: getMenusChildren('../../backEnd/Java', 'Java/')
     }]
   },
   getDiarysSidebar() {
-    return [
-      {
+    return [{
         title: '日记',
         collapsable: true,
         children: getMenusChildren('../../diarys/diary', 'diary/')
@@ -112,8 +117,7 @@ module.exports = {
     ]
   },
   getHobbySidebar() {
-    return [
-      {
+    return [{
         title: '绘画',
         collapsable: true,
         children: getMenusChildren('../../hobby/painting', 'painting/')
@@ -132,10 +136,10 @@ module.exports = {
   },
   getAboutSidebar(titleName) {
     return [
-      ['',titleName],{
+      ['', titleName], {
         collapsable: false,
         children: getMenusChildren('../../about/aboutMe', 'aboutMe/')
-      },{
+      }, {
         collapsable: false,
         children: getMenusChildren('../../about/contact', 'contact/')
       }

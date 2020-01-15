@@ -39,6 +39,10 @@ module.exports = [{
       {
         text: 'GitHub',
         link: '/devTools/github/'
+      },
+      {
+        text: 'NPM',
+        link: '/devTools/npm/'
       }
     ]
   },
