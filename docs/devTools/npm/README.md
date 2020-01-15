@@ -155,3 +155,4 @@ no_perms Private mode enable, only admin can publish this module:
 ```bash
 > npm config set registry=https://registry.npm.taobao.org/
 ```
+<Vssue title="【npm】npm包发布" />

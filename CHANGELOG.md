@@ -4,6 +4,7 @@
 
 - **npm** npm 相关知识点 README.md
 - **github** 一个本地项目，新建仓库并传到 github
+- **python** input函数
 
 ## V1.2.4 (2020-01-11)
 
