@@ -76,11 +76,17 @@
 
 都在学！，所以想学！
 
-更 amazing 的是！今天看到一个新闻，世界上首例活体机器人！机器人是活的！  他由青蛙细胞生成，可以靠自己活动、可编程、会自愈！甚至未来有可能加入神经系统和认知能力！
+更 amazing 的是！今天看到一个新闻 — — [世界上首例活体机器人](https://baijiahao.baidu.com/s?id=1655701619069679143&wfr=spider&for=pc)！
 
-那你猜他的源码是用什么写的？是 python 啊！python！！！python！！！python！！！
+**机器人是活的！** 
 
-[源码地址](https://github.com/skriegman/reconfigurable_organisms)
+**他由青蛙细胞生成，可以靠自己活动、可编程、会自愈！甚至未来有可能加入神经系统和认知能力！**
+
+那你猜他的[源码](https://github.com/skriegman/reconfigurable_organisms)是用什么写的？是 `python` 啊！`python`！！！`python`！！！`python`！！！啊！
+
+你离顶尖技术，只差一个python啊有没有！！！
+
+
 
 怎么样，看到这些，你总算有学 python 的冲动了吧！come on！
 
