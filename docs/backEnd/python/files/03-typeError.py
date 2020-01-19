@@ -21,5 +21,10 @@
 # print(xingorg1)
 
 # ValueError 值异常
-print(int('1.8'))
-print(int('非整数数字字符串'))
+# print(int('1.8'))
+# print(int('非整数数字字符串'))
+
+# IndexError 索引错误
+xingorg1 = ['小石头', 'xing.org1^', 181, True]
+print(xingorg1[4]) # 偏移量超出——IndexError: list index out of range 
+

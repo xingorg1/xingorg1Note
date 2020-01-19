@@ -1,9 +1,38 @@
+## V1.2.8 (2020-01-19)
+
+### Bug Fixes
+- 1、**python** 列表 - 优化整理
+- 2、**python** input - 优化整理
+
+## V1.2.7 (2020-01-18)
+
+### Article
+- **python** 列表
+- **daily** 只会前端让我很丢人
+
+## V1.2.6 (2020-01-16)
+
+### Article
+- **github** git提交遇到的错误整理
+
+## V1.2.5 (2020-01-15)
+
+### Article
+
+- **npm** npm 相关知识点 README.md
+- **github** 一个本地项目，新建仓库并传到 github
+- **python** input函数
+
 ## V1.2.4 (2020-01-11)
+
 ### Features
+
 - **home** 标题语和样式
 - **start** 启动页面，愿景填充
 - **nav+sidebar** 导航栏和菜单栏的一些改动
+
 ### Article
+
 - **essays** 时间的演讲，内容记录 + 图片
 - **essays** 吾日三省吾身
 - **creatives** 创意想法 - 关于工作流程的推动软件（20190704）

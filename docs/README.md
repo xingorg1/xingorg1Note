@@ -82,4 +82,4 @@ xing.org1^ 小石头，三年前端从业经验。
 
 ## -
 
-> **:woman_technologist: 越努力，越幸运。**
+> **:woman_technologist: 越努力，越幸运。永不放弃，笔直向前。**

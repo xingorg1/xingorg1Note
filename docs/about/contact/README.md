@@ -8,5 +8,7 @@
 
 ::: tip 扫描下方二维码添加我为好友
 免费找我要各种学习**视频资料**、可以解答水平不要太高的**前端问题**、以及**加同行群**一起吹水～
+
+⚠️ **请说明来自 个人博客**
 :::
 <img src="https://xingorg1.github.io/xingorg1Note/images/me.jpg" alt="小石头" style="width: 200px">
