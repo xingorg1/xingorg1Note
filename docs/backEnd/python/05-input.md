@@ -107,7 +107,7 @@ print('允许这里有个白眼！🙄️')
 运行你就会发现，这段程序肯定会报错。
 ![报错啦！](./images/inputError.png)
 
-`TypeError`的错误，具体错误分析就[去这里看](http://localhost:8080/xingorg1Note/backEnd/python/03-errorType.html#b%E3%80%81%E7%B1%BB%E5%9E%8B%E9%94%99%E8%AF%AF-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%B8%8D%E5%90%8C%E5%AF%BC%E8%87%B4)，不赘述。
+`TypeError`的错误，具体错误分析就[去这里看](https://xingorg1.github.io/xingorg1Note/backEnd/python/03-errorType.html#typeerror-unsupported-operand-type-s-for)，不赘述。
 
 但是简而言之呢，就是说咱们截图中输入的 12 ，他是个字符串。
 
