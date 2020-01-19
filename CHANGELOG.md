@@ -2,6 +2,7 @@
 
 ### Bug Fixes
 - **python** 列表 - 优化整理
+- **python** input - 优化整理
 
 ## V1.2.7 (2020-01-18)
 
