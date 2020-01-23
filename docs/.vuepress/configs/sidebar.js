@@ -142,6 +142,9 @@ module.exports = {
       }, {
         collapsable: false,
         children: getMenusChildren('../../about/contact', 'contact/')
+      }, {
+        collapsable: false,
+        children: getMenusChildren('../../about/myblog', 'myblog/')
       }
     ]
   }

@@ -14,72 +14,18 @@ meta:
     content: 前端 学习 笔记 小石头 xing.org1^ HTML CSS JS VUE
 features:
   - title: 个人介绍
-    details: 前端界的小学生~
-  - title: 笔记文档
-    details: HTML笔记、CSS笔记、JS笔记、VUE笔记、Python笔记
-  - title: 技术博客
-    details: 深入探讨学习前端相关技术
+    details: 凭着一腔热血和执着，从艺术届转来IT届。从事前端工作将近三年，但始终是一名需要不断学习的前端界的小学生~
+  - title: 技术笔记
+    details: HTML笔记、CSS笔记、JS笔记、VUE笔记、Python笔记...所有我学习的笔记全都记录在这里，画条属于我的学习轨迹。
+  - title: 生活记录
+    details: 除了技术，还有生活。以前我喜欢将日记写在收藏的本子上，将照片存到qq空间。这次索性全部搜集在这里！
 footer: MIT Licensed | Copyright © 2018-present xing.org1^
 ---
-
-## 快速起步
-
-安装：
-
-```bash
-npm i
-# OR
-cnpm i
-```
-
-运行：
-
-```bash
-npm run dev
-# OR
-npm run serve
-```
-
-打包：
-
-```bash
-npm run build
-```
-
-自动发布：
-
-```bash
-npm run push "git commit提交文案，不能有空格"
-```
+> **:woman_technologist: 越努力，越幸运。永不放弃，笔直向前。**
 
 <!-- # :woman_technologist:小石头的前端学习笔记  -->
 <!-- [[toc]] -->
 
 <!-- ![xing.org1^](./images/logo.jpg) -->
 
-## 待优化点
 
-:white_check_mark: 滚动条与主题插件  
-:white_check_mark: sidebar 侧边栏  
-:white_check_mark: 上下翻页  
-:white_check_mark: 评论功能  
-:white_check_mark: vue 组件支持  
-:o: vue 主题模板文件  
-:o: 整体样式美化  
-:o: 全局滚动条美化  
-:o: 阅读进度条
-
-## 关于我
-
-xing.org1^ 小石头，三年前端从业经验。
-
-- [博客](http://www.cnblogs.com/padding1015/)
-- [GitHub](https://github.com/xingorg1)
-- [个人项目](https://xingorg1.github.io/projectOfGjf/index.html)
-- [公众号](https://xingorg1.github.io/xingorg1Note/images/qdsb_qrcode.gif)
-
-![公众号](https://xingorg1.github.io/xingorg1Note/images/qdsb_qrcode.gif)
-
-## -
-
-> **:woman_technologist: 越努力，越幸运。永不放弃，笔直向前。**
