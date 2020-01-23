@@ -50,7 +50,20 @@ print('我右边的引号是中文的符号‘)
 #                          ^
 # SyntaxError: EOL while scanning string literal
 ```
+### 4、`SyntaxError: 'return' outside function`
 
+return没有在function函数内使用导致的报错
+
+```py
+for i in range(5):
+  if(i == 3):
+    return
+
+# 报错内容如下：
+#     return
+#     ^
+# SyntaxError: 'return' outside function
+```
 ## B、类型错误(数据类型不同导致):
 
 ### `TypeError: unsupported operand type(s) for ...`
@@ -85,7 +98,63 @@ print(a + int(b))
 print(str(a) + b)
 # 11，将整数转为字符串类型，进行字符串拼接。
 ```
+### `TypeError: 'bool' object is not iterable`
 
+**出错场景：**  
+当你遍历一个不能被for迭代的对象时，就会触发对应的错误。
+
+**int类型的整数对象不是可迭代的：**
+```py
+numberValue = 2020
+for num in numberValue:
+  print(num)
+#     for num in numberValue:
+# TypeError: 'int' object is not iterable
+```
+**float类型的浮点数对象不是可迭代的：**
+```py
+floatValue = 1.23
+for num in floatValue:
+  print(num)
+#     for num in floatValue:
+# TypeError: 'float' object is not iterable
+```
+**布尔类型的布尔对象不是可迭代的：**
+```py
+boolVal = True
+for b in boolVal:
+  print(b)
+#     for b in boolVal:
+# TypeError: 'bool' object is not iterable
+```
+**None类型的空不是可迭代的：**
+```py
+noneVal = None
+for n in noneVal:
+  print(n)
+#     for n in noneVal:
+# TypeError: 'NoneType' object is not iterable
+```
+### `TypeError: 'list' object cannot be interpreted as an integer`
+
+**出错场景：**  
+range内部只能接受整数。而列表转化不成整数，出点类型错误。
+
+```py
+nameList = ['小石头', 'xing.org1^', '郭菊锋']
+for index in range(nameList):
+  print(index) 
+#     for index in range(nameList):
+# TypeError: 'list' object cannot be interpreted as an integer
+```
+
+**修改如下：**  
+先用len获取列表的长度，然后将计算的长度这个数字，放到range内部。
+```py
+nameList = ['小石头', 'xing.org1^', '郭菊锋']
+for index in range(len(nameList)): # 0、1、2
+  print(index) 
+```
 ## C、名称错误(变量未声明就使用):
 
 ### `NameError: name 'xingorg1' is not defined`
@@ -111,7 +180,6 @@ print(int('1.8'))
 #     print(int('1.8'))
 # ValueError: invalid literal for int() with base 10: '1.8'
 ```
-
 **解决方案**  
 虽然浮点形式的字符串，不能使用 int()函数。但浮点数是可以被 int()函数强制转换的
 
@@ -129,8 +197,25 @@ print(int('非整数数字字符串'))
 #     print(int('非整数数字字符串'))
 # ValueError: invalid literal for int() with base 10: '非整数数字字符串'
 ```
-
 纯文字类数据，无法转换为整数类型。
+
+### ValueError: too many values to unpack (expected 2)
+**出错场景：**  
+表示了这里不应该有两个参数。
+```py
+nameList = ['小石头', 'xing.org1^', '郭菊锋']
+for name,index in nameList: 
+  print(index)
+#     for name,index in nameList:
+# ValueError: too many values to unpack (expected 2)
+```
+**解决方案**  
+for循环里只用一个变量：
+```py
+nameList = ['小石头', 'xing.org1^', '郭菊锋']
+for name,index in nameList: 
+  print(index)
+```
 
 ## E、缩进错误
 
