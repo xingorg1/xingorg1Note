@@ -20,10 +20,14 @@ myName = ['小石头', 'xing.org1^', 181, True]
 # print(myName)
 
 # myName.append() # 报错TypeError，必须要一个参数
-myName.append('')
-print(myName)
+# myName.append('')
+# print(myName)
 
-del(myName[4])
-print(myName)
-del(myName[1],myName[2])
-print(myName)
+# del(myName[4])
+# print(myName)
+# del(myName[1],myName[2])
+# print(myName)
+
+popResult = myName.pop()
+print(myName) # ['小石头', 'xing.org1^', 181]
+print(popResult) # True

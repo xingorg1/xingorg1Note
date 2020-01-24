@@ -1,8 +1,16 @@
+
+## V1.3.1 (2020-01-24)
+
+### Features
+- **python** while循环
+
 ## V1.3.0 (2020-01-24)
 
 ### Features
 - **container&&nav** 调整文章模版和菜单栏
 
+### Bug Fixes
+- **python** 错误类型丰富
 ## V1.2.10 (2020-01-23)
 
 ### Article
