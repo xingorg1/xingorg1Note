@@ -39,12 +39,34 @@ body{
   .home .hero h1, .home .hero .description, .home .hero .action{
     margin: 1.8rem auto 0.8rem;
   }
-  .home .hero h1{
-    font-size: 2rem
-  }
-  .home .hero .description{
-    margin-top: 0.8rem;
-    font-size: 1rem
+  .home .hero {
+    h1{
+      font-size: 2rem
+      text-shadow: 3px 2px 0px rgba(255, 100, 227, 0.25);
+      color: #ff32d9;
+    }
+    .description{
+      margin-top: 0.8rem;
+      font-size: 1rem
+    }
+    .action-button{
+      background: linear-gradient(45deg, #605dff, #ff2ee6);
+      background: linear-gradient(45deg, #ff2edc, #ffad4c);
+      border-bottom: 0;
+      animation: pulse 2.5s linear infinite;
+      box-shadow: 0px 10px 20px 0px rgba(255, 100, 227, 0.23);
+      
+    }
+    img[alt="hero"]{
+      height: 280px;
+      width: 360px;
+      color: #fff;
+      /*border: 1px solid white;
+      border-image: linear-gradient(45deg, #ff31d9, #ffb15b);
+      border-image-width: auto;*/
+      background: linear-gradient(45deg, #ff2edc, #ffad4c);
+      border-radius: 4px;
+    }
   }
 }
 
@@ -58,20 +80,7 @@ body{
 .home .theme-default-content.content__default{
   min-height: 30px;
 }
-body .home .hero .action-button{
-  background: linear-gradient(45deg, #605dff, #ff2ee6);
-  background: linear-gradient(45deg, #ff2edc, #ffad4c);
-  border-bottom: 0;
-}
-.hero img[alt="hero"]{
-  border: 1px solid white;
-  border-image: linear-gradient(45deg, #ff31d9, #ffb15b);
-  border-image-width: auto;
-  background: linear-gradient(45deg, #ffae49, #dfa0b4, #7177bc);
-  color: #fff;
-  height: 280px;
-  width: 360px;
-}
+
 .footer .footer-right{
   opacity: 0.2;
 }
@@ -135,4 +144,39 @@ html,body {
   margin-top: 30px;
   padding-top: 10px;
   border-top:1px solid #eaecef;
+}
+
+/* animate.css*/
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
 }
