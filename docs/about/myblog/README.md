@@ -45,6 +45,18 @@ npm run push "git commit提交文案，不能有空格"
 :o: 返回顶部按钮美化(20200124)
 
 ## 待改进bug
+:white_check_mark: mac每次运行npm都需要sudo，否则就没权限。怎么去除(20200125)
+```sh
+npm run dev
+
+> xingorg1_note@1.0.0 dev /Users/guojufeng/Documents/GitHub/xingorg1Note
+> vuepress dev docs
+
+wait Extracting site metadata...
+Error: EACCES: permission denied,
+```
+已解决。[点击查看改进方案](../../devTools/npm/mac命令需要输入sudo的问题)
+
 :o: 每次发布都要配置公钥（再已经配置好的基础上）(20200124)
 ```bash
 git@github.com: Permission denied (publickey).
@@ -52,10 +64,10 @@ fatal: Could not read from remote repository.
 
 Please make sure you have the correct access rights
 ```
-:o: 改版后的首页，图片需要一个最小高度和未加载成功的展位图
+:white_check_mark: 改版后的首页，图片需要一个最小高度和未加载成功的展位图
 （初步想用背景色，渐变色，伪类添加文字的形式实现）(20200124)
 
-:o: 左侧sidebar的滚动条和代码区的滚动条、样式美化。
+:o: 左侧sidebar的滚动条和代码区的滚动条、样式美化。(20200123)
 
 [最后，欢迎帮我提bug～]()
 
