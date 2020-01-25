@@ -28,3 +28,33 @@ window.addEventListener("resize", function(){
     console.log("4")
 });
 ```
+
+## JS获取时间戳的几种方法
+利用内置的getTime()方法
+```js
+new Date().getTime()
+```
+利用+号运算符，实现类型转换，获取数字格式
+```js
++new Date()
+// 举一反三，也可以用其他方式获取数字格式：
+-new Date() // ⚠️还需要再去掉-号,比如下边的写法
+Math.abs(-new Date())
+new Date() * 1
+Math.floor(new Date())
+Math.ceil(new Date())
+Math.round(new Date())
+
+```
+使用原型链上的方法valueOf()
+```js
+new Date().valueOf()
+```
+原理了解了，依旧举一反三，简单粗暴使用Number方法转为数字
+```js
+Number(new Date())
+```
+上述方案实验截图：  
+![JS获取时间戳的几种方法实验截图](./images/timestamp.png)
+
+![JS获取时间戳的几种方法实验截图](./images/timestamp2.png)
