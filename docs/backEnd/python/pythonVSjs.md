@@ -214,6 +214,55 @@ x++; // 每次递增1
 // 第二种
 x += 1; // 这点和py是相同的
 ```
+## 逻辑运算符
+### 1、与
+
+python：【与】`and`
+
+```py
+if 1 and 2:
+  print('条件成立')
+```
+
+javascript：【并且】`&&`
+
+```js
+if(1 && 2){
+  console.log('条件成立')
+}
+```
+### 2、或
+
+python：【或】`or`
+
+```py
+if False or 3:
+  print('条件成立')
+```
+
+javascript：【或者】`||`
+
+```js
+if(false || 3){
+  console.log('条件成立')
+}
+```
+### 3、非
+
+python：【非】`not`
+
+```py
+if not False:
+  print('条件成立')
+```
+
+javascript：【取反】`!`（英文感叹号）
+
+```js
+if(!false){
+  console.log('条件成立')
+}
+```
 
 ## 表达式
 
