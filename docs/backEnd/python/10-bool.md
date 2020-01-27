@@ -320,3 +320,5 @@ print(10, bool([False]))
 ```py
 # 参考代码位于源代码files文件夹下对应章节的py文件中
 ```
+
+<Vssue title="【Python】数据类型之布尔值" />
