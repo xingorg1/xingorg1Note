@@ -41,7 +41,7 @@ module.exports = {
 
     // Git 仓库
     repo: 'xingorg1/xingorg1Note', // 你的仓库
-    repoLabel: 'GitHub', // 导航栏上的文本
+    repoLabel: '源码', // 导航栏上的文本
 
     // 编辑链接
     editLinks: true,
