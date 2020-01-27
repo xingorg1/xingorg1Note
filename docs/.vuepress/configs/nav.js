@@ -33,13 +33,46 @@ module.exports = [
     text: '后端',
     items: [{
       text: 'Python',
-      link: '/backEnd/python/'
+      // link: '/backEnd/python/'
+      items: [
+        {
+          text: '基础',
+          link: '/backEnd/python/'
+        }, {
+          text: '模块',
+          link: '/backEnd/python/modules/01-time'
+        }, {
+          text: '编程思维',
+          link: '/backEnd/python/thinking/01-problem'
+        }, {
+          text: '小游戏',
+          link: '/backEnd/python/games/01-KOF'
+        }, {
+          text: '大项目',
+          link: '/backEnd/python/project/01-email'
+        }, {
+          text: '爬虫',
+          link: '/backEnd/python/robot/'
+        }
+      ]
     }, {
       text: 'MySQL',
-      link: '/backEnd/MySQL/'
+      // link: '/backEnd/MySQL/'
+      items: [
+        {
+          text: '基础',
+          link: '/backEnd/MySQL/'
+        }
+      ]
     }, {
       text: 'Java',
-      link: '/backEnd/Java/'
+      // link: '/backEnd/Java/'
+      items: [
+        {
+          text: '基础',
+          link: '/backEnd/Java/'
+        }
+      ]
     }]
   },
   {

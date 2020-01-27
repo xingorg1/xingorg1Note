@@ -76,7 +76,31 @@ module.exports = {
     return [{
       title: 'Python',
       collapsable: true,
-      children: getMenusChildren('../../backEnd/python', 'python/')
+      children: [{
+        title: '基础',
+        collapsable: true,
+        children: getMenusChildren('../../backEnd/python', 'python/')
+      },{
+        title: '模块',
+        collapsable: true,
+        children: getMenusChildren('../../backEnd/python/modules', 'python/modules/')
+      },{
+        title: '编程思维',
+        collapsable: true,
+        children: getMenusChildren('../../backEnd/python/thinking', 'python/thinking/')
+      },{
+        title: '小游戏',
+        collapsable: true,
+        children: getMenusChildren('../../backEnd/python/games', 'python/games/')
+      },{
+        title: '大项目',
+        collapsable: true,
+        children: getMenusChildren('../../backEnd/python/project', 'python/project/')
+      },{
+        title: '爬虫',
+        collapsable: true,
+        children: getMenusChildren('../../backEnd/python/robot', 'python/robot/')
+      }]
     }, {
       title: 'MySQL',
       collapsable: true,
