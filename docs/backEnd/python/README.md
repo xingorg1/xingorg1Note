@@ -22,43 +22,42 @@
 
 ### 一、python 应用
 
-:smiley:web 全栈开发（我的目标）
+:heart_eyes:web 全栈开发（**我的目标:two_hearts:**）
 
-:smiley:网络爬虫（我的目标）
+:heart_eyes:网络爬虫（**我的目标:two_hearts:**）
 
-:smiley:自动化运维
+:heart_eyes:自动化运维
 
-:smiley:人工智能应用
+:heart_eyes:人工智能应用
 
-:smiley:多媒体处理
+:heart_eyes:多媒体处理
 
-:smiley:自动化办公
+:heart_eyes:自动化办公
 
 ### 二、数据科学
 
-:smiley:数据分析
+:heart_eyes:数据分析
 
-:smiley:数据产品
+:heart_eyes:数据产品
 
-:smiley:量化交易
+:heart_eyes:量化交易
 
 ### 三、机器学习
 
-:smiley:数据挖掘
+:heart_eyes:数据挖掘
 
-:smiley:搜索算法
+:heart_eyes:搜索算法
 
-:smiley:机器学习算法
+:heart_eyes:机器学习算法
 
-:smiley:推荐算法
+:heart_eyes:推荐算法
 
 ### 四、深度学习
 
-:smiley:人工智能应用
+:heart_eyes:人工智能应用
 
-:smiley:...
+:heart_eyes:...
 
----
 
 ## 说点实际的
 
@@ -66,15 +65,15 @@
 
 就因为 python，
 
-工资很高，所以想学！
+工资很高，所以想学！:heart_eyes:
 
-现在很火，所以想学！
+现在很火，所以想学！:heart_eyes:
 
-人工智能，所以想学！
+人工智能，所以想学！:heart_eyes:
 
-提高效率，所以想学！
+提高效率，所以想学！:heart_eyes:
 
-都在学！，所以想学！
+都在学！，所以想学！:heart_eyes:
 
 更 amazing 的是！今天看到一个新闻 — — [世界上首例活体机器人](https://baijiahao.baidu.com/s?id=1655701619069679143&wfr=spider&for=pc)！
 
@@ -88,13 +87,14 @@
 
 
 
-怎么样，看到这些，你总算有学 python 的冲动了吧！come on！
+怎么样，看到这些，你总算有学 python 的冲动了吧！:two_hearts: come on！
 
-## 规划目录
+## 计划整理目录和顺序
 * :o: 基础知识点  
   * :white_check_mark: 基础语法  
   * :o: 函数  
   * :o: 类与对象  
+  * :o: 数据类型 - 元祖  
   * :o: 编码和文件读写  
 * :o: 模块  
   * :o: 时间模块time  
@@ -112,5 +112,7 @@
 * :o: 项目  
   * :o: 发邮件  
   * :o: 楼盘信息统计器  
+* :o: 爬虫  
+  * :o: ... 
   
 <Vssue title="【Python】介绍Python" />

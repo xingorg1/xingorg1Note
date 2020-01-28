@@ -99,7 +99,7 @@ module.exports = {
       },{
         title: '爬虫',
         collapsable: true,
-        children: getMenusChildren('../../backEnd/python/robot', 'python/robot/')
+        children: getMenusChildren('../../backEnd/python/spider', 'python/spider/')
       }]
     }, {
       title: 'MySQL',

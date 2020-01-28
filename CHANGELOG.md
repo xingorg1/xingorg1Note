@@ -4,6 +4,9 @@
 - **nav** 修改后端nav
 - **sidebar** 修改python菜单栏，分模块处理
 
+### Article
+- **python** 函数
+
 ## V1.3.4 (2020-01-27)
 
 ### Features

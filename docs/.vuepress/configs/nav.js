@@ -52,7 +52,7 @@ module.exports = [
           link: '/backEnd/python/project/01-email'
         }, {
           text: '爬虫',
-          link: '/backEnd/python/robot/'
+          link: '/backEnd/python/spider/'
         }
       ]
     }, {
