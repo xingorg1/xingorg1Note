@@ -77,7 +77,7 @@ module.exports = {
       title: 'Python',
       collapsable: true,
       children: [{
-        title: '基础',
+        title: '基础语法',
         collapsable: true,
         children: getMenusChildren('../../backEnd/python', 'python/')
       },{
