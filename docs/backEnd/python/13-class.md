@@ -1,4 +1,4 @@
-# 类与对象
+# 类(class)与对象(object)
 ## 类(class)和实例
 ### 类
 整数、字符串、浮点数等，不同的数据类型就属于不同的类。  
@@ -147,9 +147,220 @@ print(boyfriend.sex) # 打印"male"
 boyfriend.caring() # 打印“好了，不哭了~”
 ```
 值得说明的是，调用类方法时，传参不用考虑self参数的存在。
-## 创建类的两个关键点
+fa
+## 特殊参数：self
 可以看到上例，为什么实例调用方法时不用传参，在定义时那个参数self又是什么意思呢？
-### 特殊参数：self
 > 这个参数self的特殊之处：“在定义时不能丢，在调用时要忽略。”
+### 1、代指实例化对象的作用
+其实这个`self`有点像JS中构造函数内部的`this`。self是所有实例化对象的替身。指的是任何用这个类生成的实例化对象：
+```py
+# self
+class SelfMean:
+  content = '类SelfMean中的属性'
+  def oneFn(self):
+    print(self.content) # self在此指向实例化的对象"selfMean"
+selfMean = SelfMean()
+selfMean.oneFn() # 打印类中content的值 - "类SelfMean中的属性"
+```
+注意上例中，在oneFn函数内部，使用类中的属性content时，不能直接当变量使用，否则如下写法就会报错：
+```py
+class SelfMean:
+  content = '类SelfMean中的属性'
+  def oneFn(self):
+    print(content) # 不用self调用类属性，就会报错NameError: name 'content' is not defined
+selfMean = SelfMean()
+selfMean.oneFn()
+```
+变量未经定义就使用，就会报这种`NameError`的问题。详见[第三章错误类型总结篇](https://xingorg1.github.io/xingorg1Note/backEnd/python/03-errorType.html#nameerror-name-xingorg1-is-not-defined)。
 
-### 初始化方法
+有人会疑问，代码中oneFn上边不是定义了content还给她赋值了吗？怎么能说未定义呢？  
+函数的作用域中也说了，自己oneFn函数内部找不到的变量，会向上找父级作用域、层层向上查询乃至全局作用域的变量啊，他自己虽然没有、但是他爸爸有啊！为啥还说未定义呢？
+
+同志啊，醒醒。这里是类啊！不是函数。类内部的变量是定义给实例化对象的属性的啊。换句话说，上述代码实例化对象转换成字典的模样长下边这样：
+```py
+selfMean = {
+  'content': '类SelfMean中的属性',
+  'oneFn': 一个函数体在这里~
+}
+```
+所以你如果不用字典的方式(1、selfMean.content；2、selfMean['content'])调用这个属性，他是拿不出来的。
+
+而在类内部，实例化对象还没出生，你不知道他未来的名字叫selfMean1、还是叫selfMean37。也就没有办法用selfMean.content或selfMean37['content']的方式去调用它。  
+所以在这之前，需要**有一个统一的`self`，来代指未来的实例化对象，并达到提前在`类内部`使用实例化对象的属性和方法的目的**。  
+使用方式就是`self.属性`、`self.方法名`(除self以外的传参)。看下例：
+```py
+class SelfMean:
+  content = '类SelfMean中的属性'
+  def oneFn(self):
+    print(self.content) # 提前在类中使用了实例化对象的属性 content，等价于selfMean.content
+    self.twoFn('哈哈哈哈哈~') # 提前在类中使用了实例化对象的方法 twoFn、并传参
+  def twoFn(self, txt):
+    print('实例化对象的第二个方法，打印内容：', txt)
+selfMean = SelfMean()
+selfMean.oneFn()
+```
+### 2、定义方法必传self
+看上边的代码中，oneFn和twoFn都有`self`参数，并且都是第一个参数，这并不是巧合。
+
+**只要在类中定义的方法，第一个参数就必须是`self`。不过调用方法时，可以忽略它，不用给self传参。**
+### 3、调用方法传参时self可忽略
+我们调用实例方法的时候，传参不用考虑`self`。以此往后类推就行：
+```py
+class SelfParams:
+  content = '类SelfParams中的属性'
+  def twoFn(self,name,sex,age,weight):
+    print(self.content)
+    print(name,sex,age,weight) # 2、依次打印传递过来的位置参数的值：小石头 female 19 91
+selfParams = SelfParams()
+selfParams.twoFn('小石头','female',19,91) # 1、调用方法时忽略self参数，依次按位置传递name,sex,age,weight的参数
+```
+## 初始化方法(构造函数)
+
+### 1、定义初始化方法
+定义初始化方法的格式是`def __init__(self)`，是由`init`关键字加左右两边的【双】下划线(__)组成。
+
+双下划线是英文输入法下，shift + 0右边的那个键打出来的。
+### 2、初始化方法的作用
+#### 无需调用自执行
+一、当每个实例对象创建时（即函数调用时），该方法内的代码无须调用就会自动运行。无需"实例名.__init__"的方式调用
+```py
+# init
+class InitTest:
+  def __init__(self):
+    a = 321
+    b = 345
+
+    print("初始化就会执行init里的代码: ", a+b)
+initTest = InitTest()
+
+# 运行后直接打印：初始化就会执行init里的代码:  666
+```
+可见 ，触发类对象的调用时，就直接触发了__init__方法的调用。
+#### 为类属性设置初始值
+一般情况下，我们都会在初始化方法内部完成类属性的创建，为类属性设置初始值，这样类中的其他方法就能直接、随时调用。
+
+上述代码改写如下：
+```py
+class InitTest:
+  def __init__(self):
+    # 为类属性设置初始值，要写在__init__函数内部的最上方，否则会报错
+    self.a = 321 # 注意self的存在。
+    self.b = 345 # 同上
+
+    # 定义完属性的初始值以后，才能在下变写__init__里边要处理的其他逻辑
+    print("初始化就会执行__init__里的代码")
+    self.plusAd()
+
+  def plusAd(self):
+    print(self.a + self.b) # 使用类属性
+
+initTest = InitTest()
+# 打印结果如下
+# 初始化就会执行init里的代码
+# 666
+```
+
+### 3、初始化方法接收其他参数
+除了设置固定常量，初始化方法同样可以接收其他参数，并把这些参数赋值给类的属性并被类中其他方法使用：
+```py
+# 初始化方法接收参数
+class InitParams:
+  def __init__(self,aP,bP):
+    self.a = aP
+    self.b = bP
+
+    print('初始化执行并设置属性、把参数aP和bP的值给了属性a和b')
+    self.plusAd()
+
+  def plusAd(self):
+    print(self.a + self.b) # 其他方法也能用同一个属性
+
+  def sub(self):
+    print(self.a - self.b) # 其他方法也能用公用的属性
+
+initParams1 = InitParams(12, 4) # __init__需要的参数在类调用时传递
+# 打印结果：
+# 初始化执行并设置属性、把参数aP和bP的值给了属性a和b
+# 16
+# 8
+
+initParams2 = InitParams(30, 5) # __init__需要的参数在类调用时传递，可以多次调用，传不同的参数，进而得到不一样的结果
+# 打印结果：
+# 初始化执行并设置属性、把参数aP和bP的值给了属性a和b
+# 35
+# 25 
+```
+当初始化方法__init__有多个参数的时候，在实例化（类调用）的时候就要传入相应的值。
+
+上例第一次调用，12传给了aP、4传给了bP。  
+上例第二次调用，30传给了aP、5传给了bP。
+
+这也是初始化方法的好处，传参一次可被多次调用，
+
+## 番外 - 面向对象
+### 面向过程
+面向过程编程：首先分析出解决问题所需要的步骤（即“第一步做什么，第二步做什么，第三步做什么”），然后用函数实现各个步骤，再依次调用。一个示例：
+```py
+# 全局变量定义
+globalA = 12
+globalB = 20
+globalCount = 0
+
+# 加
+def plus():
+  global globalCount
+  globalCount = globalA + globalB
+  sub()
+
+# 减
+def sub():
+  global globalCount
+  globalCount = globalCount - globalA/2
+  print(globalCount)
+
+# 主流程
+def main():
+  plus()
+
+# 启动流程
+main()
+```
+我们根据“全局变量数据整理——主流程——加法计算——减法计算”这个过程封装了三个函数，再依次调用，按规定顺序执行程序。
+
+### 面向对象
+面向对象编程，会将程序看作是一组对象的集合。通过调用对象的属性和方法，来拼凑完成一段功能。
+```py
+# 面向对象
+class Calculator:
+  def __init__(self,a,b):
+    # 公共属性定义
+    self.globalA = a
+    self.globalB = b
+    self.globalCount = 0
+
+  # 是加法方法，能做加法
+  def plus(self):
+    self.globalCount = self.globalA + self.globalB
+    print(self.globalCount)
+
+  # 是减法方法，能做减法
+  def sub(self):
+    self.globalCount = self.globalCount - self.globalA/2
+    print(self.globalCount)
+
+calculator = Calculator(12,20)
+calculator.plus()
+calculator.sub()
+```
+用这种思维设计代码时，考虑的不是程序具体的执行过程（即先做什么后做什么），而是考虑先创建某个类，在类中设定好属性和方法，即是什么，和能做什么。
+
+接着，再以类为模版创建一个实例对象，用这个实例去调用类中定义好的属性和方法（plus、sub）即可。
+
+
+### 面向对象的好处
+1. 参数的传递会比普通函数要省事很多。(不必考虑全局变量和局部变量，因为类中的方法可以直接调用属性。）
+2. 代码的可复用性也更高。（类能封装更多的东西，既能包含操作数据的方法，又能包含数据本身。）
+3. 代码结构会更清晰。（代码的可读性、可拓展性和可维护性这几个方面都会优于面向过程编程。）
+4. 一目了然。（面向对象编程将代码具体的数据和处理方法都封装在类中，不用完全了解过程也可以调用类中的各种方法。并且还可以分开调用）
+5. 可以在 Python 中轻松地调用各种标准库、第三方库和自定义模块（别人写好的类框架代码）
+<Vssue title="【Python】类和对象" />

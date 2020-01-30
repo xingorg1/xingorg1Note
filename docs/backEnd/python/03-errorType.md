@@ -8,6 +8,7 @@ NameError| 名称错误(变量未声明就使用)
 ValueError| 值异常(不匹配的数据类型被一起操作)
 IndentationError| 缩进错误(缺少、丢失、数量不对的格式缩进)
 IndexError | 偏移量错误(获取列表等类型数据的元素时偏移量设置不对)
+UnboundLocalError | 作用域错误(局部变量在局部作用域内有定义，但是却在定义前使用)
 ## A、语法错误：
 
 ### 1、`syntaxError:invalid syntax`
@@ -167,7 +168,6 @@ print(xingorg1)
 #     print(xingorg1)
 # NameError: name 'xingorg1' is not defined
 ```
-
 ## D、值异常
 
 ### `ValueError: invalid literal for int() with base 10: '1.8'`
@@ -279,7 +279,62 @@ print(xingorg1[4]) # 偏移量超出——IndexError: list index out of range
 ```
 
 
+## G、作用域错误
 
+### `UnboundLocalError: local variable 'xxx' referenced before assignment`
+
+**出错场景：**  
+报错解释：本地变量‘xxx’在赋值之前引用~
+
+在函数内部的某变量G，`此变量被定义了的前提下`，在定义之前使用这个变量，就会报错：作用域局部绑定错误。
+
+示例如下：
+```py
+# 作用域错误 - 局部变量在定义前使用
+def UnboundLocalErrorTest():
+  print(textVar) # 但是提前在赋值之前使用了
+  textVar = 1 # 定义了该变量
+
+UnboundLocalErrorTest()
+```
+⚠️这种千万要区分`NameError`变量未定义的错误。因为这种的变量已经定义了，只不过是在定义之前使用的。如下：
+```py
+def UnboundLocalErrorTest():
+  print(textVar) # 没有定义就直接使用，是变量未定义的错误
+
+UnboundLocalErrorTest()
+```
+⚠️这种也要注意使用环境，是在局部函数内部出现的作用域问题，因为如果在全局作用域环境里边，一个定义过的变量在定以前被使用，不会报这种错误，而是报`NameError`变量未定义的错误。如下：
+
+```py
+# 不同于局部未定义错误和局部作用域错误。在全局环境中会有如下表现：
+
+print(globalNameErrorVar) # 但是提前使用，也报未定义错误
+globalNameErrorVar = 12 # 虽然定义了
+```
+**解决写法：**  
+就老实点，定义完了再用白：
+```py
+def NoUnboundLocalErrorTest():
+  textVar = 1    # 1、定义
+  print(textVar) # 2、使用
+
+NoUnboundLocalErrorTest()
+```
+
+<!-- 
+模板：
+## 
+### ``
+
+**出错场景：**  
+```py
+```
+
+
+**解决写法：**  
+```py
+``` -->
 
 
 <Vssue title="Python 错误类型与引起原因分析" />

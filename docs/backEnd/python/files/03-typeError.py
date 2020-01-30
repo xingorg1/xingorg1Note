@@ -51,3 +51,14 @@
 # xingorg1 = ['小石头', 'xing.org1^', 181, True]
 # print(xingorg1[4]) # 偏移量超出——IndexError: list index out of range 
 
+
+# 作用域错误 - 局部变量在定义前使用
+def UnboundLocalErrorTest():
+  print(textVar)
+  # textVar = 1
+
+UnboundLocalErrorTest()
+
+print(globalNameErrorVar) # 不同于这种未定义错误。
+globalNameErrorVar = 12
+
