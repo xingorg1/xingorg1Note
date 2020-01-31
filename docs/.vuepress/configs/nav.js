@@ -36,7 +36,7 @@ module.exports = [
       // link: '/backEnd/python/'
       items: [
         {
-          text: '基础',
+          text: '基础语法',
           link: '/backEnd/python/'
         }, {
           text: '模块',

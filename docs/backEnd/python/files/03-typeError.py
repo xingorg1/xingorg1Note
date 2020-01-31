@@ -52,13 +52,49 @@
 # print(xingorg1[4]) # 偏移量超出——IndexError: list index out of range 
 
 
-# 作用域错误 - 局部变量在定义前使用
-def UnboundLocalErrorTest():
-  print(textVar)
-  # textVar = 1
+# # 作用域错误 - 局部变量在定义前使用
+# def UnboundLocalErrorTest():
+#   print(textVar)
+#   # textVar = 1
 
-UnboundLocalErrorTest()
+# UnboundLocalErrorTest()
 
-print(globalNameErrorVar) # 不同于这种未定义错误。
-globalNameErrorVar = 12
+# print(globalNameErrorVar) # 不同于这种未定义错误。
+# globalNameErrorVar = 12
+
+
+# # 属性错误
+# 情况一
+class AttributeError:
+  def __init__(self):
+    self.undefinedVar = '提前定义好就能用了'
+  def test(self):
+    print(self.undefinedVar) # 在类中引用未定义的属性
+
+attributeError = AttributeError()
+attributeError.test()
+
+# 情况二
+# class Father:
+#   def __init__(self):
+#     self.familyName = '郭'
+
+# class Son(Father): # 子类Son继承父类Father
+#   def __init__(self):
+#     print(self.familyName) # AttributeError: 'Son' object has no attribute 'familyName'
+  
+# son1 = Son()
+
+# # 属性错误 - 解决方法
+# class Father:
+#   familyName = '郭哈哈哈'
+
+#   def language(self):
+#     print(self.familyName) 
+
+# class Son(Father): # 子类Son继承父类Father
+#   def __init__(self):
+#     self.language()
+  
+# son1 = Son()
 

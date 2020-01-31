@@ -1,14 +1,16 @@
 # 错误类型与可能原因分析
-## 汇总
-错误类型| 描述
--|-
-syntaxError| 语法错误(情况复杂，见下)
-TypeError| 类型错误(数据类型不同导致)
-NameError| 名称错误(变量未声明就使用)
-ValueError| 值异常(不匹配的数据类型被一起操作)
-IndentationError| 缩进错误(缺少、丢失、数量不对的格式缩进)
-IndexError | 偏移量错误(获取列表等类型数据的元素时偏移量设置不对)
-UnboundLocalError | 作用域错误(局部变量在局部作用域内有定义，但是却在定义前使用)
+## 错误类型汇总表格
+编号|错误类型| 描述
+-| -|-
+A| syntaxError| 语法错误(情况复杂，见下)
+B| TypeError| 类型错误(数据类型不同导致)
+C| NameError| 名称错误(变量未声明就使用)
+D| ValueError| 值异常(不匹配的数据类型被一起操作)
+E| IndentationError| 缩进错误(缺少、丢失、数量不对的格式缩进)
+F| IndexError | 偏移量错误(获取列表等类型数据的元素时偏移量设置不对)
+G| UnboundLocalError | 作用域错误(局部变量在局部作用域内有定义，但是却在定义前使用)
+H| AttributeError | 属性错误(某个类调用自己没有的某属性时就会报错)
+
 ## A、语法错误：
 
 ### 1、`syntaxError:invalid syntax`
@@ -67,7 +69,7 @@ for i in range(5):
 ```
 ## B、类型错误(数据类型不同导致):
 
-### `TypeError: unsupported operand type(s) for ...`
+### 1、`TypeError: unsupported operand type(s) for ...`
 
 **出错场景：**  
 不同类型的数据进行结合计算或处理，就会发生错误。
@@ -99,7 +101,7 @@ print(a + int(b))
 print(str(a) + b)
 # 11，将整数转为字符串类型，进行字符串拼接。
 ```
-### `TypeError: 'bool' object is not iterable`
+### 2、`TypeError: 'bool' object is not iterable`
 
 **出错场景：**  
 当你遍历一个不能被for迭代的对象时，就会触发对应的错误。
@@ -136,7 +138,7 @@ for n in noneVal:
 #     for n in noneVal:
 # TypeError: 'NoneType' object is not iterable
 ```
-### `TypeError: 'list' object cannot be interpreted as an integer`
+### 3、`TypeError: 'list' object cannot be interpreted as an integer`
 
 **出错场景：**  
 range内部只能接受整数。而列表转化不成整数，出点类型错误。
@@ -158,7 +160,7 @@ for index in range(len(nameList)): # 0、1、2
 ```
 ## C、名称错误(变量未声明就使用):
 
-### `NameError: name 'xingorg1' is not defined`
+### 1、`NameError: name 'xingorg1' is not defined`
 
 **出错场景：**  
 直接使用一个没有声明的变量，当在本作用域和全局作用域中找不到时，就会发生错误。
@@ -170,7 +172,7 @@ print(xingorg1)
 ```
 ## D、值异常
 
-### `ValueError: invalid literal for int() with base 10: '1.8'`
+### 1、`ValueError: invalid literal for int() with base 10: '1.8'`
 
 **出错场景：**  
 Python 的语法规则，浮点类型的字符串不能使用 int()函数进行强制转换。
@@ -199,7 +201,7 @@ print(int('非整数数字字符串'))
 ```
 纯文字类数据，无法转换为整数类型。
 
-### ValueError: too many values to unpack (expected 2)
+### 2、ValueError: too many values to unpack (expected 2)
 **出错场景：**  
 表示了这里不应该有两个参数。
 ```py
@@ -219,7 +221,7 @@ for name,index in nameList:
 
 ## E、缩进错误
 
-### `IndentationError: expected an indented block`
+### 1、`IndentationError: expected an indented block`
 
 **出错场景：**  
 对于 Python 而言，冒号和缩进是一种语法。它会帮助 Python 区分代码之间的层次，理解条件执行的逻辑及先后顺序。
@@ -255,7 +257,7 @@ if number=='1':
 
 ## F、偏移量错误
 
-### `IndexError: list index out of range`
+### 1、`IndexError: list index out of range`
 
 **出错场景：**  
 提取/获取列表中的元素时，我们通常会用`列表名[偏移量]`的方式来操作。
@@ -281,7 +283,7 @@ print(xingorg1[4]) # 偏移量超出——IndexError: list index out of range
 
 ## G、作用域错误
 
-### `UnboundLocalError: local variable 'xxx' referenced before assignment`
+### 1、`UnboundLocalError: local variable 'xxx' referenced before assignment`
 
 **出错场景：**  
 报错解释：本地变量‘xxx’在赋值之前引用~
@@ -322,6 +324,68 @@ def NoUnboundLocalErrorTest():
 NoUnboundLocalErrorTest()
 ```
 
+## H、属性错误(未定义属性获取失败)
+### 1、`AttributeError: 'Son' object has no attribute 'familyName'`
+
+**出错场景：**  
+在类中获取一个未定义的属性时，就会报错
+```py
+class AttributeError:
+  def test(self):
+    print(self.undefinedVar) # 在类中引用未定义的属性
+
+attributeError = AttributeError()
+attributeError.test()
+```
+或者在子类中，引用父类和子类都没定义的属性，同样也会报这个错误。有点像变量未定义，只不过这个是类中属性未定义。
+
+不过，下边这个例子特殊，父类中明明定义了familyName，为啥调用还是说没这个属性呢?
+
+```py
+class Father:
+  def __init__(self):
+    self.familyName = '郭'
+
+class Son(Father): # 子类Son继承父类Father
+  def __init__(self):
+    print(self.familyName) # AttributeError: 'Son' object has no attribute 'familyName'
+  
+son1 = Son()
+```
+
+这是因为这个属性定义在父类的__init__中。父类Father没有调用，所以init初始化方法不会执行，self.familyName的定义就不会执行。相当于在父类中没有定义这个属性。
+
+**解决写法：**  
+第一种情况：  
+一个类中没定义属性就调用该属性，然后报错了。你说咋解决呢！  
+两个方法，一是不调用，二是在调用前定义好。
+```py
+class AttributeError:
+  def __init__(self):
+    self.undefinedVar = '提前定义好就能用了'
+  def test(self):
+    print(self.undefinedVar) # 这次打印就没问题了。因为属性已经定义了
+
+attributeError = AttributeError()
+attributeError.test()
+```
+第二种
+子类继承父类的情况：  
+父类的属性不在__init__方法中定义即可。
+```py
+class Father:
+  familyName = '郭哈哈哈'
+
+  def language(self):
+    print(self.familyName) 
+
+class Son(Father): # 子类Son继承父类Father
+  def __init__(self):
+    self.language()
+  
+son1 = Son()
+```
+
 <!-- 
 模板：
 ## 
@@ -334,7 +398,8 @@ NoUnboundLocalErrorTest()
 
 **解决写法：**  
 ```py
-``` -->
+``` 
+-->
 
 
 <Vssue title="Python 错误类型与引起原因分析" />
