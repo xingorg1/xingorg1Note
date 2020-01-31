@@ -145,31 +145,67 @@ print(isinstance(1,(int,str))) # True
 
 print(isinstance(1,object)) # True
 # 判断实例是否属于元组里几个类中的一个
-# # 子类和父类 汇总
-# class Father:
-#   familyName = '郭' # 姓氏
-#   nativePlace = '河北省' # 籍贯
 
-#   def language(self):
-#     print('%s家，母语说中国话' %(self.familyName))
+# 子类继承父类并做自我创新
+class Father:
+  familyName = '郭' # 姓氏
+  nativePlace = '河北省' # 籍贯
+  def language(self):
+    print('%s家，母语说中国话' %(self.familyName))
+
+class Son(Father): # 子类Son继承父类Father
+  def __init__(self, name, presentAddress):
+    self.name = name # 子类创新自己的属性name
+    self.presentAddress = presentAddress # 子类创新自己的属性presentAddress
+
+  def secondLanguage(self, languageName): # 子类创新自己的方法secondLanguage
+    self.language()
+    print('%s单独学说了%s' %(self.name, languageName))
+    
+  def resume(self): # 子类创新自己的方法resume
+    print('%s姓%s,籍贯是%s。现居住在%s' %(self.name, self.familyName,self.nativePlace, self.presentAddress))
+
+# 子类的第一个实例
+son1 = Son('小菊', '北京')
+son1.secondLanguage('英语')
+son1.resume()
+
+# 子类的第二个实例
+son2 = Son('小锋', '杭州')
+son2.secondLanguage('韩语')
+son2.resume()
+
+# 实例既可以用子类的属性和方法，也可以调用父类的属性和方法
+print(son1.familyName)
+print(son1.nativePlace)
+
+# # 二儿子，从小生下来被过继给了日本的舅舅。虽然是爸爸的儿子，但是因为在日本长大，所以母语说日语，于是我们重写了继承来自爸爸类的方法language
+# class Son2(Father): # 被过继给叔叔的二儿子类Son2
+#   languageTxt = '日语' # 自己的属性，属新增的创新
+#   nativePlace = '北海道' # 修改的属性，属重写的创新
+#   def language(self): # 修改的方法，属重写的创新
+#     print('我的母语说：', self.languageTxt)
+  
+# son2 = Son2()
+# son2.language()
+# # 我的母语说： 日语
+
+# 优雅的重写
+class Father:
+  familyName = '郭'
+  nativePlace = '河北省'
+  def language(self, languageTxt = '中国话'):
+    print('%s家，母语说%s' %(self.familyName, languageTxt))
 
 # class Son(Father): # 子类Son继承父类Father
-#   def __init__(self, name, presentAddress):
-#     self.name = name
-#     self.presentAddress = presentAddress
-#   def secondLanguage(self, languageName):
-#     self.language()
-#     print('%s单独学说了%s' %(self.name, languageName))
-#   def resume(self):
-#     print('%s姓%s,籍贯是%s。现居住在%s' %(self.name, self.familyName,self.nativePlace, self.presentAddress))
+#   # ...代码同上一段里的
+
+class Son2(Father): # 继承父类Father，不过被过继给叔叔的二儿子类Son2
+  languageTxt = '日语' # 自己的属性，属新增的创新
+  nativePlace = '北海道' # 修改的属性，属重写的创新
+  def language(self): # 修改的方法，属重写的创新
+    Father.language(self, self.languageTxt) # 里边的代码有自己定制的内容，属于重写。
   
-
-# son1 = Son('小菊', '北京')
-# son1.secondLanguage('英语')
-# son1.resume()
-
-
-# son2 = Son('小锋', '杭州')
-# son2.secondLanguage('韩语')
-# son2.resume()
-
+son2 = Son2()
+son2.language()
+# 我的母语说： 日语

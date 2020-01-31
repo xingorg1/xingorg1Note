@@ -388,45 +388,113 @@ print(son.age) # 102
 
 总结：**多重继承中，若某父类还有父类的话，会先按照多层继承的顺序，纵向往上找到顶。若到顶还没有，则再继续向右扩展寻找多重的继承。**
 
-
 ## 类的创新
 我们可以在继承父类代码的基础上，再书写子类自己更具自我特色的代码。这就是子类的创新部分了。
 
 比如下边代码中，儿子的姓就是继承父亲的。儿子的名字就是自己创新的部分。儿子籍贯是继承父类后生下来就有的，但是以后自己跑到北京、杭州居住，那就是自己创新的部分。
-
+### 创新 - 新增代码
 ```py
-# 子类和父类
+# 子类继承父类并做自我创新
 class Father:
   familyName = '郭' # 姓氏
   nativePlace = '河北省' # 籍贯
-
   def language(self):
     print('%s家，母语说中国话' %(self.familyName))
 
 class Son(Father): # 子类Son继承父类Father
   def __init__(self, name, presentAddress):
-    self.name = name
-    self.presentAddress = presentAddress
-  def secondLanguage(self, languageName):
+    self.name = name # 子类创新自己的属性name
+    self.presentAddress = presentAddress # 子类创新自己的属性presentAddress
+
+  def secondLanguage(self, languageName): # 子类创新自己的方法secondLanguage
     self.language()
     print('%s单独学说了%s' %(self.name, languageName))
-  def resume(self):
+    
+  def resume(self): # 子类创新自己的方法resume
     print('%s姓%s,籍贯是%s。现居住在%s' %(self.name, self.familyName,self.nativePlace, self.presentAddress))
 
+# 子类的第一个实例
 son1 = Son('小菊', '北京')
 son1.secondLanguage('英语')
 son1.resume()
 
+# 子类的第二个实例
 son2 = Son('小锋', '杭州')
 son2.secondLanguage('韩语')
 son2.resume()
+
+# 实例既可以用子类的属性和方法，也可以调用父类的属性和方法
+print(son1.familyName)
+print(son1.nativePlace)
 ```
 上述代码中，  
-子类内部用的self.language()，以及这个language内部用的属性familyName、子类自己方法resume中用的self.nativePlace等都是继承来自父类Father的。
+子类内部用的self.language()、以及这个language方法内部用的属性familyName、子类自己方法resume中用的self.nativePlace等都是继承自父类Father的。  
+这就是继承的部分。
 
-self.name、self.presentAddress 是属于子类自己的属性  
-self.secondLanguage、self.resume 是属于子类自己的方法。  
-【好吧，我承认这是一句多余的不行的废话】
+Son类中的self.name、self.presentAddress 是属于子类新增的属于自己的属性、  
+self.secondLanguage、self.resume 是属于子类新增的属于自己的方法。这就是创新的部分。  
 
-### 创新 - 修改继承的内容
-在继承的基础上可以做创新，甚至可以修改继承来的属性和方法。
+*好吧，我承认这是一句多余的不行的废话*
+
+### 创新 - 修改(重写)继承的内容
+在继承的基础上可以做新加代码，甚至可以重写（修改）继承来的属性和方法。
+
+`重写代码`: 是在子类中，对父类代码的修改。
+
+
+还是用代码来说明问题，在上边代码的基础上，我们想一段情景剧：
+
+Father类现在有一个二儿子Son2，他从小生下来被过继给了日本的亲叔叔。  
+因为叔叔和爸爸同姓，所以继承的属性“familyName”不用管，还是姓“郭”。但是到了日本后上户口就是日本的籍贯了，所以“nativePlace”得修改重写。  
+另外虽然是爸爸的儿子（继承自Father），但是因为在日本长大，所以母语变成说日语了。于是我们重写了继承来自爸爸类的方法“language”。如下
+```py
+class Father:
+  familyName = '郭'
+  nativePlace = '河北省'
+  def language(self):
+    print('%s家，母语说中国话' %(self.familyName))
+
+class Son(Father): # 子类Son继承父类Father
+  # ...代码同上一段里的
+
+class Son2(Father): # 继承父类Father，不过被过继给叔叔的二儿子类Son2
+  languageTxt = '日语' # 自己的属性，属新增的创新
+  nativePlace = '北海道' # 修改的属性，属重写的创新
+  def language(self): # 修改的方法，属重写的创新
+    print('我的母语说：', self.languageTxt) # 里边的代码有自己定制的内容，属于重写。
+  
+son2 = Son2()
+son2.language()
+# 我的母语说： 日语
+```
+可见，重写父类的属性和方法，只要在子类中重新定义同名的变量，并做自己的定制代码即可。
+
+但是，直接在Son2里这么写，Father会不会伤心呢？  
+到底是自己生的儿子，给了别人后就这么迫不及待、直接的修改，爸爸的心，痛啊！
+
+所以，重写代码按照上边这么写，他粗鲁了。那有什么优雅的重写吗？
+
+### 优雅的重写
+```py
+# 优雅的重写
+class Father:
+  familyName = '郭'
+  nativePlace = '河北省'
+  def language(self, languageTxt = '中国话'): # 需要父类的这个方法协助修改
+    print('%s家，母语说%s' %(self.familyName, languageTxt)) 
+
+class Son2(Father):
+  languageTxt = '日语'
+  nativePlace = '北海道'
+  def language(self): # 依旧重写方法
+    Father.language(self, self.languageTxt) # 不过里边的代码不再是粗鲁的直接修改为自己的内容，而是调用父类的方法，但是传不同的参数。
+  
+son2 = Son2()
+son2.language()
+# 郭家，母语说日语
+```
+上边代码，依旧重写方法。不过里边的代码不再是粗鲁的直接修改为自己的内容，而是调用父类的方法，但是传不同的参数。
+
+---
+
+总结：所谓创新，在复用代码的基础上，又能满足个性化的需求。
