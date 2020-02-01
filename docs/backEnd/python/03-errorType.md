@@ -68,7 +68,7 @@ for i in range(5):
 # SyntaxError: 'return' outside function
 ```
 ## B、类型错误(数据类型不同导致):
-
+类型错误，说明是该数据类型做了不适合他自己做的事情。
 ### 1、`TypeError: unsupported operand type(s) for ...`
 
 **出错场景：**  
@@ -139,10 +139,8 @@ for n in noneVal:
 # TypeError: 'NoneType' object is not iterable
 ```
 ### 3、`TypeError: 'list' object cannot be interpreted as an integer`
-
 **出错场景：**  
 range内部只能接受整数。而列表转化不成整数，出点类型错误。
-
 ```py
 nameList = ['小石头', 'xing.org1^', '郭菊锋']
 for index in range(nameList):
@@ -150,7 +148,6 @@ for index in range(nameList):
 #     for index in range(nameList):
 # TypeError: 'list' object cannot be interpreted as an integer
 ```
-
 **修改如下：**  
 先用len获取列表的长度，然后将计算的长度这个数字，放到range内部。
 ```py
@@ -158,6 +155,25 @@ nameList = ['小石头', 'xing.org1^', '郭菊锋']
 for index in range(len(nameList)): # 0、1、2
   print(index) 
 ```
+### 4、`TypeError: 'tuple' object is not callable`
+同样是类型错误，说明是该数据类型做了不适合他自己做的事情。  
+**出错场景：**  
+比如下例，我一不小心写了一个用tuple元祖类型的变量调用的bug。本意想获取元祖数据的第一项（下标为0）数据的值，结果脑子短路错把中括号写成了小括号导致的报错：
+```py
+tupleVal = ('a',1,True)
+print(tupleVal(0)) 
+# 打印如下
+#     print(tupleVal(0)) # TypeError: 'tuple' object is not callable
+# TypeError: 'tuple' object is not callable
+```
+**修改如下：**  
+针对本例，修改为正确的写法，根据偏移量获取数据在列表中也写了，使用中括号包裹偏移量：
+```py
+tupleVal = ('a',1,True)
+print(tupleVal[0]) # 'a'
+```
+但是针对此类型的错误，说明元祖类型数据不能当函数调用。
+
 ## C、名称错误(变量未声明就使用):
 
 ### 1、`NameError: name 'xingorg1' is not defined`

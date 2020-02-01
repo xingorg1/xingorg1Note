@@ -36,6 +36,10 @@
 # for index in range(len(nameList)): # 0、1、2
 #   print(index) 
 
+tupleVal = ('a',1,True)
+print(tupleVal(0)) # TypeError: 'tuple' object is not callable
+print(tupleVal[0]) # a
+
 # nameError 变量名错误
 # print(xingorg1)
 
@@ -64,15 +68,15 @@
 
 
 # # 属性错误
-# 情况一
-class AttributeError:
-  def __init__(self):
-    self.undefinedVar = '提前定义好就能用了'
-  def test(self):
-    print(self.undefinedVar) # 在类中引用未定义的属性
+# # 情况一
+# class AttributeError:
+#   def __init__(self):
+#     self.undefinedVar = '提前定义好就能用了'
+#   def test(self):
+#     print(self.undefinedVar) # 在类中引用未定义的属性
 
-attributeError = AttributeError()
-attributeError.test()
+# attributeError = AttributeError()
+# attributeError.test()
 
 # 情况二
 # class Father:

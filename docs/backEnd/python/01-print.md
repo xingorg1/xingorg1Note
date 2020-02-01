@@ -111,4 +111,33 @@ print('第一行\n第二行\n哈哈，23333～')
 
 > 注意 ⚠️：区分，斜杠"/"与反斜杠"\\"，此处不可互换
 
+## 四、print函数原理
+观察细致的可以发现，print()函数它可以接收多个参数。
+### 完整参数
+源码中，其完整的参数：
+```py
+print(*objects, sep = ' ', end = '\n', file = sys.stdout, flush = False)
+```
+其中，`*objects`就是**不定长参数**。后边四个就是**默认参数**。
+### 不定长参数
+因为`*objects`接收不定量参数，所以我们调用print时，可以传递很多个不限量的参数。
+而`*objects`就会是元祖类型的数据。
+```py
+print('小石头', 'xing.org1^', 'gjf')
+# 小石头 xing.org1^ gjf
+```
+而对于后边四个**默认参数**，我们可以通过修改默认值来改变参数。
+
+### 默认参数
+sep控制多个值之间的分隔符，默认是空格
+```py
+print('小石头', 'xing.org1^', 'gjf', sep = '、')
+# 小石头、xing.org1^、gjf
+```
+end控制打印结果的结尾，默认是换行)
+```py
+print('小石头', 'xing.org1^', 'gjf', sep = '、', end = '... \n')
+# 小石头、xing.org1^、gjf... ...
+```
+
 <Vssue title="Python print函数" />

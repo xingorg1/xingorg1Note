@@ -165,6 +165,7 @@ sex='female'就是默认参，参数的默认值是'female'。
 #### 不定长度参数
 顾名思义，就是传递给参数的数量是可选的、不确定的。
 
+不定长参数可以接收任意数量的值。
 它的格式比较特殊，是一个星号`*`加上参数名，它的返回值也比较特殊，
 ```py
 def noLen(*variables):
@@ -176,7 +177,7 @@ noLenResult = noLen('参数1','参数2','参数3')
 print(noLenResult) # ('参数1', '参数2', '参数3')
 print(type(noLenResult)) # <class 'tuple'>
 ```
-`<class 'tuple'>`这种数据类型叫作元组(tuple)。新篇章再做整理
+`<class 'tuple'>`这种数据类型叫作元组(tuple)。[见该篇章](https://xingorg1.github.io/xingorg1Note/backEnd/python/15-tuple.html)
 
 在不定长参数后边还可以放默认参
 ```py

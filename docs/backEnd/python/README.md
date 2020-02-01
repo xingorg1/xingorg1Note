@@ -90,10 +90,11 @@
 怎么样，看到这些，你总算有学 python 的冲动了吧！:two_hearts: come on！
 
 ## 计划整理目录和顺序
+* :o: 错误类型与解决方案（持续整理中...)    
 * :o: 基础知识点  
   * :white_check_mark: 基础语法  
   * :white_check_mark: 函数  
-  * :o: 类与对象  
+  * :white_check_mark: 类与对象  
   * :o: 数据类型 - 元祖  
   * :o: 编码和文件读写  
 * :o: 模块  
