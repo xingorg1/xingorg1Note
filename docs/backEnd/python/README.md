@@ -95,7 +95,7 @@
   * :white_check_mark: 基础语法  
   * :white_check_mark: 函数  
   * :white_check_mark: 类与对象  
-  * :o: 数据类型 - 元祖  
+  * :white_check_mark: 数据类型 - 元祖  
   * :o: 编码和文件读写  
 * :o: 模块  
   * :o: 时间模块time  

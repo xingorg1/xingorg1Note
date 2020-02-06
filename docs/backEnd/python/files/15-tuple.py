@@ -39,3 +39,22 @@ returnResult1 = returnmore1(1)
 
 print(returnResult1) # 1
 print(type(returnResult1)) # <class 'int'>
+
+# 元祖中的运算符
+plusTuple = (2-1, 3-2, 4-3)
+print(plusTuple)
+
+plusList = [2-1, 3-2, 4-3]
+print(plusList)
+
+# 元祖的嵌套与嵌套获取
+
+
+# 元组是不可修改类型
+程序运行过程中，元组的元素是不能被插入和删除的。
+但是可以再构造一个新的元组，替换原来的。
+
+# 元组合并
+多个元组合并为一个新的元组。
+
+# 元组遍历
