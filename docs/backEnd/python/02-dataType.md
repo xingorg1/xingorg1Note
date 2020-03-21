@@ -1,12 +1,16 @@
 # 数据类型与类型转换
 
 ## 一、简单数据类型
-* 字符串 str   
+* 字符串 str
 * 整数 int
 * 浮点数 float
 * 布尔值 bool - [知识点整合在这里](./10-bool)
 * 空 None
-
+### 补充：复杂数据类型
+* 列表 list - [知识点整合在这里](./06-list)
+* 字典 dict - [知识点整合在这里](./07-dict)
+* 函数 function - [知识点整合在这里](./12-function)
+* 元祖 tuple - [知识点整合在这里](./15-tuple)
 ### 1、字符串 str
 字符串：英文string，简写str。
 ```py
@@ -51,7 +55,7 @@ print('Today is',year,month,day)
 print(20.19)
 # 20.19
 print(-12.25) # 可以为负数
-# -12.25 
+# -12.25
 print(520.1314 + 07.11) # 可以做数学运算
 # 527.2414
 ```
@@ -64,7 +68,37 @@ print(520.1314 + 07.11) # 可以做数学运算
 
 它和0的区别：0是整数0，None是什么都没有。
 
+#### 判断一个变量为None的几种方法
+1) `if variable is None`
+2) `not variable`
+3) `if not (a is None)`
 
+示例代码：
+```py
+# 判断为None的几种方法
+def fun():
+	return None
+
+a = fun()
+
+# 1)
+if a is None:
+	print('a is None') # 执行该行，并打印：a is None
+else:
+	print('a is not None')
+
+# 2）
+if not a:
+	print('a 的类型是 None') # 执行该行，并打印：a 的类型是 None
+else:
+	print('a 不是 None')
+
+# 3)
+if not (a is None):
+	print('a is None', '是错的')
+else:
+  print('a is None', '是对的') # 执行该行，并打印：a is None 是对的
+```
 ## 二、类型查询
 * type()函数
 ### 1、type()函数作用
@@ -97,6 +131,25 @@ print(type(numberStr))
 * 整数的英文简称为int，全称为integer
 
 * float就是浮点数类型
+### 3、数据类型查询结果表
+
+```py
+# 备用代码，定义一个函数a
+def a():
+	pass
+```
+type()类型获取
+执行打印|打印结果|汉语含义
+:-|-|-
+`print(type('str'))` |	# <class 'str'>	| 字符串
+`print(type(1))` |	# <class 'int'>	| 整数
+`print(type(1.3))` |	# <class 'float'>	| 浮点数
+`print(type(True))` |	# <class 'bool'>	| 布尔
+`print(type(None))` |	# <class 'NoneType'>	| None
+`print(type({}))` |	# <class 'dict'>	| 字典
+`print(type([]))`	|# <class 'list'>	| 列表
+`print(type(a))`	|# <class 'function'>	| 函数
+`print(type((1,2,3)))`|	# <class 'tuple'>	| 元祖
 
 ## 三、类型转换
 * str()函数
@@ -119,11 +172,11 @@ print(type(numberStr))
 ```py
 a = 1
 b = '1'
-# print(a + b) 
+# print(a + b)
 # # 这么写报错。改正如下：
-print(a + int(b)) 
+print(a + int(b))
 # 2，将字符串转换为int类型，进行加法运算
-print(str(a) + b) 
+print(str(a) + b)
 # 11，将整数转为字符串类型，进行字符串拼接。
 ```
 负责转换数据类型的函数一共有3种：str()、 int()和float()。
