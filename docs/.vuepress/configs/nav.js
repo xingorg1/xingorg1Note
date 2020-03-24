@@ -3,10 +3,13 @@ module.exports = [
   // {
   //   text: '主页',
   //   link: '/'
-  // }, 
+  // },
   {
     text: '前端',
     items: [{
+      text: 'HTTP',
+      link: '/webNote/http/'
+    },{
       text: 'Html',
       link: '/webNote/web/'
     }, {
@@ -28,7 +31,7 @@ module.exports = [
       text: 'Mobile',
       link: '/webNote/mobile/'
     }]
-  }, 
+  },
   {
     text: '后端',
     items: [{

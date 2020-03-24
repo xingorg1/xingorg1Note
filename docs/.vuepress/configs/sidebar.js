@@ -20,6 +20,10 @@ module.exports = {
     return [
       ['', titleName],
       {
+        title: 'HTTP',
+        collapsable: true,
+        children: getMenusChildren('../../webNote/http', 'http/')
+      },{
         title: 'Html',
         collapsable: true,
         children: getMenusChildren('../../webNote/web', 'web/')
