@@ -59,4 +59,14 @@ export default ({
   //   } catch (e) {
   //     console.error(e.message)
   // }
+  var monthNum = new Date().getMonth()+1
+  var dateNum = new Date().getDate()
+  if(
+    (monthNum === 4 && dateNum === 4) ||
+    (monthNum === 9 && dateNum === 18) ||
+    (monthNum === 12 && dateNum === 13)
+  ){
+    document.getElementsByTagName('body')[0].style.filter = 'saturate(0)';
+    console.log('逝者安息，生者坚强，祖国荣昌。')
+  }
 }
