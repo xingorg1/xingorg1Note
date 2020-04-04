@@ -172,6 +172,9 @@ module.exports = [
     }, {
       text: '掘金',
       link: 'https://juejin.im/user/58e704a02f301e0062343c10'
+    }, {
+      text: '语雀',
+      link: 'https://www.yuque.com/xing.org1'
     }]
   }
 ]
