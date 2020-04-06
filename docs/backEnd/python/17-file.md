@@ -218,7 +218,14 @@ with open('文件地址','读写模式') as 变量名: #格式：注意冒号
 with open('./demo.txt','a') as openResult:
     openResult.write('小石头')
 ```
-
+## python克隆图片
+原理，用python读取一个图片文件，然后再写入一个新的图片文件。实现图片的拷贝克隆功能。
+```py
+with open('photo1.png', 'rb') as photo1: # 打开原图photo1.png，rb只读二进制资源模式
+    result = photo1.read() # 将读取结果赋值给result
+    with open('photo2.jpg', 'wb') as photo2: # 打开新图photo2.jpg，wb只写模式，没有该文件将创建一个新文件。
+        photo2.write(result) # 创建的新文件中，写入photo1的数据，实现图片克隆。
+```
 ## 小练习
 文件读写操作小练习:
 
