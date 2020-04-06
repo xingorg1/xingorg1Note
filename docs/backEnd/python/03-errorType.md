@@ -11,6 +11,7 @@ F| IndexError | 偏移量错误(获取列表等类型数据的元素时偏移量
 G| UnboundLocalError | 作用域错误(局部变量在局部作用域内有定义，但是却在定义前使用)
 H| AttributeError | 属性错误(某个类调用自己没有的某属性时就会报错)
 I| UnicodeDecodeError | 解码错误（要解码的内容得跟编码时用的编码表不一致就会报错）
+J| FileNotFoundError | 文件找不到错误（读取文件时找不到文件就会报错）
 
 ## A、语法错误：
 
@@ -37,6 +38,7 @@ print(‘我左边的引号是中文的符号')
 ```
 
 **出错场景：**
+
 这通常是因为在 python 中用了中文符号造成的。
 
 在 Python 中，默认所有正确的语法，包括标点符号都是【英文】。不小心用了中文标点的话，计算机会无法识别，然后报错。
@@ -75,6 +77,7 @@ for i in range(5):
 ### 1、`TypeError: unsupported operand type(s) for ...`
 
 **出错场景：**
+
 不同类型的数据进行结合计算或处理，就会发生错误。
 
 ```py
@@ -107,6 +110,7 @@ print(str(a) + b)
 ### 2、`TypeError: 'bool' object is not iterable`
 
 **出错场景：**
+
 当你遍历一个不能被for迭代的对象时，就会触发对应的错误。
 
 **int类型的整数对象不是可迭代的：**
@@ -143,6 +147,7 @@ for n in noneVal:
 ```
 ### 3、`TypeError: 'list' object cannot be interpreted as an integer`
 **出错场景：**
+
 range内部只能接受整数。而列表转化不成整数，出点类型错误。
 ```py
 nameList = ['小石头', 'xing.org1^', '郭菊锋']
@@ -152,6 +157,7 @@ for index in range(nameList):
 # TypeError: 'list' object cannot be interpreted as an integer
 ```
 **修改如下：**
+
 先用len获取列表的长度，然后将计算的长度这个数字，放到range内部。
 ```py
 nameList = ['小石头', 'xing.org1^', '郭菊锋']
@@ -161,6 +167,7 @@ for index in range(len(nameList)): # 0、1、2
 ### 4、`TypeError: 'tuple' object is not callable`
 同样是类型错误，说明是该数据类型做了不适合他自己做的事情。
 **出错场景：**
+
 比如下例，我一不小心写了一个用tuple元祖类型的变量调用的bug。本意想获取元祖数据的第一项（下标为0）数据的值，结果脑子短路错把中括号写成了小括号导致的报错：
 ```py
 tupleVal = ('a',1,True)
@@ -170,6 +177,7 @@ print(tupleVal(0))
 # TypeError: 'tuple' object is not callable
 ```
 **修改如下：**
+
 针对本例，修改为正确的写法，根据偏移量获取数据在列表中也写了，使用中括号包裹偏移量：
 ```py
 tupleVal = ('a',1,True)
@@ -182,6 +190,7 @@ print(tupleVal[0]) # 'a'
 ### 1、`NameError: name 'xingorg1' is not defined`
 
 **出错场景：**
+
 直接使用一个没有声明的变量，当在本作用域和全局作用域中找不到时，就会发生错误。
 
 ```py
@@ -195,6 +204,7 @@ print(xingorg1)
 ### 1、`ValueError: invalid literal for int() with base 10: '1.8'`
 
 **出错场景：**
+
 Python 的语法规则，浮点类型的字符串不能使用 int()函数进行强制转换。
 
 ```py
@@ -203,6 +213,7 @@ print(int('1.8'))
 # ValueError: invalid literal for int() with base 10: '1.8'
 ```
 **解决方案**
+
 虽然浮点形式的字符串，不能使用 int()函数。但浮点数是可以被 int()函数强制转换的
 
 可以先将字符串转换为浮点类型，再将浮点数转换为 int 类型。如下：
@@ -223,6 +234,7 @@ print(int('非整数数字字符串'))
 
 ### 2、ValueError: too many values to unpack (expected 2)
 **出错场景：**
+
 表示了这里不应该有两个参数。
 ```py
 nameList = ['小石头', 'xing.org1^', '郭菊锋']
@@ -232,6 +244,7 @@ for name,index in nameList:
 # ValueError: too many values to unpack (expected 2)
 ```
 **解决方案**
+
 for循环里只用一个变量：
 ```py
 nameList = ['小石头', 'xing.org1^', '郭菊锋']
@@ -244,6 +257,7 @@ for name,index in nameList:
 ### 1、`IndentationError: expected an indented block`
 
 **出错场景：**
+
 对于 Python 而言，冒号和缩进是一种语法。它会帮助 Python 区分代码之间的层次，理解条件执行的逻辑及先后顺序。
 
 > 【注：缩进是四个空格或一个 Tab 键】
@@ -267,6 +281,7 @@ print('1')
 if 条件下面，缺少了可以执行的动作。那么无论条件成不成立，都不会执行什么操作，这个条件的存在没有任何意义。
 
 **解决写法：**
+
 加缩进
 
 ```py
@@ -280,6 +295,7 @@ if number=='1':
 ### 1、`IndexError: list index out of range`
 
 **出错场景：**
+
 提取/获取列表中的元素时，我们通常会用`列表名[偏移量]`的方式来操作。
 
 但是列表可提取的偏移量是有列表的长度决定的。偏移量最小从0开始，最大可用偏移量为`列表长度-1`。
@@ -306,6 +322,7 @@ print(xingorg1[4]) # 偏移量超出——IndexError: list index out of range
 ### 1、`UnboundLocalError: local variable 'xxx' referenced before assignment`
 
 **出错场景：**
+
 报错解释：本地变量‘xxx’在赋值之前引用~
 
 在函数内部的某变量G，`此变量被定义了的前提下`，在定义之前使用这个变量，就会报错：作用域局部绑定错误。
@@ -335,6 +352,7 @@ print(globalNameErrorVar) # 但是提前使用，也报未定义错误
 globalNameErrorVar = 12 # 虽然定义了
 ```
 **解决写法：**
+
 就老实点，定义完了再用白：
 ```py
 def NoUnboundLocalErrorTest():
@@ -348,6 +366,7 @@ NoUnboundLocalErrorTest()
 ### 1、`AttributeError: 'Son' object has no attribute 'familyName'`
 
 **出错场景：**
+
 在类中获取一个未定义的属性时，就会报错
 ```py
 class AttributeError:
@@ -376,6 +395,7 @@ son1 = Son()
 这是因为这个属性定义在父类的__init__中。父类Father没有调用，所以init初始化方法不会执行，self.familyName的定义就不会执行。相当于在父类中没有定义这个属性。
 
 **解决写法：**
+
 第一种情况：
 一个类中没定义属性就调用该属性，然后报错了。你说咋解决呢！
 两个方法，一是不调用，二是在调用前定义好。
@@ -406,6 +426,65 @@ class Son(Father): # 子类Son继承父类Father
 son1 = Son()
 ```
 
+
+## I、解码错误(解码时编码表使用错误):
+
+### 1、`UnicodeDecodeError: 'gbk' codec can't decode byte 0xb4 in position 8: incomplete multibyte sequence`
+
+**出错场景：**
+
+要解码的一个内容，跟他被编码时用的编码表不一致导致报错。
+
+```py
+# 先编码
+print('小石头'.encode('utf-8')) # b'\xe5\xb0\x8f\xe7\x9f\xb3\xe5\xa4\xb4'
+# 再解码
+print(b'\xe5\xb0\x8f\xe7\x9f\xb3\xe5\xa4\xb4'.decode('GBK'))
+# 把utf-8编码的字符串用GBK来解码，就报错了。
+# UnicodeDecodeError: 'gbk' codec can't decode byte 0xb4 in position 8: incomplete multibyte sequence
+```
+### 2、`UnicodeDecodeError: 'utf-8' codec can't decode byte 0xce in position 107: invalid continuation byte`
+**出错场景：**
+
+使用open()函数读取或写入文件时，需要传入第三个参数表示文件的编码格式。
+```py
+openResult = open('/Users/.../demo.txt','r',encoding='utf-8')
+```
+但是如果encoding=后边的类型和实际demo.txt文件的格式不一致的话，就会报错：
+![open文件时编码不正确](./images/UnicodeDecodeError2.png)
+
+**解决方案**
+
+```
+查看txt文件的编码、修改txt文件编码，或者根据文件的实际编码，修改自己代码中的编码类型。
+```
+这里记录如何查看/修改txt文件编码：
+
+找到文件，右键点击文件 - 打开方式 - 记事本。
+
+在记事本中，左上角点击“文件” - “另存为”。
+
+在“另存为”弹窗中查看编码/修改编码
+![](./images/txtFileCode.png)
+
+## J、文件找不到错误(文件查找失败错误):
+
+### 1、`FileNotFoundError: [Errno 2] No such file or directory: '/.../file.txt'`
+
+**出错场景：**
+
+open()函数打开一个文件时、并且第二个参数是读取模式时，若第一个参数的路径错误或者该路径指向的文件根本不存在，就会报文件找不到的错误。
+
+如下代码就报错了：
+```py
+openResult = open(site + '17-file.txt','r',encoding='utf-8') # 1、打开
+# FileNotFoundError: [Errno 2] No such file or directory: '/Users/guojufeng/Documents/GitHub/xingorg1Note/17-file.txt'
+```
+原因很简单，就是在路径“/Users/guojufeng/Documents/GitHub/xingorg1Note/”下没有“17-file.txt”这个文件。
+
+**但是这个例子比较特殊**：路径找不到就报错的前提是，open函数的第二个参数是r、rb、r+、rb+的时候。如果是w和a体系的，就不会报错、并在该路径下新建同名文件。[详细知识点](./17-file.md#open函数)
+
+
 <!--
 模板：
 ##
@@ -420,21 +499,4 @@ son1 = Son()
 ```py
 ```
 -->
-
-## I、解码错误(解码时编码表使用错误):
-
-### 1、`UnicodeDecodeError: 'gbk' codec can't decode byte 0xb4 in position 8: incomplete multibyte sequence`
-
-**出错场景：**
-要解码的一个内容，跟他被编码时用的编码表不一致导致报错。
-
-```py
-# 先编码
-print('小石头'.encode('utf-8')) # b'\xe5\xb0\x8f\xe7\x9f\xb3\xe5\xa4\xb4'
-# 再解码
-print(b'\xe5\xb0\x8f\xe7\x9f\xb3\xe5\xa4\xb4'.decode('GBK'))
-# 把utf-8编码的字符串用GBK来解码，就报错了。
-# UnicodeDecodeError: 'gbk' codec can't decode byte 0xb4 in position 8: incomplete multibyte sequence
-```
-
 <Vssue title="Python 错误类型与引起原因分析" />

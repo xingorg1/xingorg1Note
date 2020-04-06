@@ -22,20 +22,7 @@ features:
 footer: MIT Licensed | Copyright © 2018-present xing.org1^
 ---
 > **:woman_technologist: 越努力，越幸运。永不放弃，笔直向前。**
-<!--
-<script>
-  // 公祭日计算
-  var monthNum = new Date().getMonth()+1
-  var dateNum = new Date().getDate()
-  if(
-    (monthNum === 4 && dateNum === 4) ||
-    (monthNum === 9 && dateNum === 18) ||
-    (monthNum === 12 && dateNum === 13)
-  ){
-    document.getElementsByTagName('body')[0].style.filter = 'saturate(0)';
-    console.log('逝者安息，生者坚强，祖国荣昌。')
-  }
-</script> -->
+
 <!-- # :woman_technologist:小石头的前端学习笔记  -->
 <!-- [[toc]] -->
 
