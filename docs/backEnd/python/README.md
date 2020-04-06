@@ -97,7 +97,7 @@
   * :white_check_mark: 类与对象
   * :white_check_mark: 数据类型 - 元祖
   * :white_check_mark: 计算机编码知识（2020.03.15）
-  * :o: 文件读写（2020.03.15）
+  * :white_check_mark: 文件读写（2020.04.06）
 * :o: 模块
   * :o: 时间模块time
   * :o: 随机模块random
