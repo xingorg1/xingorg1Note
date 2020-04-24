@@ -1,5 +1,5 @@
 # xingorg1Note
-
+[迭代记录](https://github.com/xingorg1/xingorg1Note/blob/master/CHANGELOG.md)
 ## 快速起步
 
 安装：

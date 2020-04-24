@@ -1,3 +1,8 @@
+## V1.4.7 (2020-04-06)
+### Article
+- **python** 错误类型（补充 FileNotFoundError）
+- **python** 文件读取
+
 ## V1.4.6 (2020-03-15)
 ### Article
 - **python** 数据类型 - None和type补充
