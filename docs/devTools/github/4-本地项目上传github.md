@@ -222,5 +222,34 @@ $ git push --set-upstream origin master
 
 真实一场与 bug 磕个头破血流的挣扎史啊！
 
+## 总结
+```bash
+# git 设置
+$ git config user.name "你的 username"
+$ git config user.email "你的 useremail"
+
+# 初始化本地git仓库
+$ git init
+
+# 创建远程仓库（官网可视化界面操作）
+
+# 本地仓库修改内容后
+$ git add .
+$ git commit -m "..."
+
+# 本地仓库添加了github上的git仓库作为远程仓库，起名origin；
+$ git remote add origin https://github.com/xingorg1/xingorg1-js-utils.git
+
+# 远程与本地建立联系
+$ git branch --set-upstream-to=origin/master master
+# 或
+$ git push --set-upstream origin master
+
+# 拉取+合并两个独立启动仓库的历史
+$ git pull origin master --allow-unrelated-histories
+
+# 推送本地master分支到远程master分支
+$ git push origin master:master
+```
 
 <Vssue title="【github】本地上传项目" />
