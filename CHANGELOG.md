@@ -1,3 +1,7 @@
+## V1.4.8 (2020-04-27)
+### Article
+- **VUE** nextTick源码分析
+
 ## V1.4.7 (2020-04-06)
 ### Article
 - **python** 错误类型（补充 FileNotFoundError）
