@@ -120,34 +120,56 @@ timerFunc = function () {
 根据if里边的思路，我们该看nextTickHandler里都是啥了，监听了DOM变化后，每次回调都干了撒？
 
 ### C、`nextTickHandler()`
+逐句阅读代码：
 ```js
+// 1
 pending = false
 ```
 每次nextTickHandler调用，`pending`先置为false，之前猜测pending是一个锁的想法，进一步得到了验证。
 ```js
+// 2
 var copies = callbacks.slice(0)
 ```
 利用数组的slice()方法，传入起始下标0，不传终点下标，得到一个浅拷贝callbacks的新数组，并复制给`copies`。
 ```js
+// 3
 callbacks = []
 ```
 重新赋值`callback`为一个空数组
 ```js
+// 4
 for (var i = 0; i < copies.length; i++) {
     copies[i]()
 }
 ```
-最后遍历copies数组，顺序调取copies队列里的函数。
+最后遍历`copies`数组，顺序调取copies队列里的函数。
 郁闷了，这个copies里的（确切的说是callbacks里的）每一项函数都是个啥？哪来的？
 
+这得看看callbacks这个变量在哪里赋值了、赋值的都是啥。于是我们
+全局搜索callbacks，发现除了目前看到的三个，还有一个在`return` 的匿名函数里。
+
+![callbacks全局搜索](./images/nextTick3.png)
 ### D、`return`
-全局搜索callbacks，发现除了目前看到的三个，还有一个在return 的匿名函数里。
-
-<!-- ![callbacks全局搜索](./images/nextTick3.png) -->
-
 本着哪里不会点哪里的原则，说明到了我们观察返回的这个匿名函数内部代码的时候了。
 
-但说返回值前，我们先回忆一下nextTick的用法：
+源码里，nextTick等于一个立即执行函数，函数执行完毕return一个匿名函数如下，也就是说，下边的代码就是我们调用nextTick的时候调用的函数。
+```js
+function (cb, ctx) {
+  var func = ctx
+      ?
+      function () {
+          cb.call(ctx)
+      }
+      :
+      cb
+  callbacks.push(func)
+  if (pending) return
+  pending = true
+  timerFunc(nextTickHandler, 0)
+}
+```
+#### `nextTick`用法
+我们先回忆一下nextTick的用法：
 ```js
 // modify data
 vm.msg = 'Hello'
@@ -156,9 +178,81 @@ Vue.nextTick(function () {
   // DOM updated
 })
 ```
-第一个参数：传入一个匿名函数。函数里边就是我们开发者执行nextTick后要执行的内容。
-第二个参数：demo里没写。
+可以看到，nextTick的第一个参数传入一个匿名函数。函数里边代码就是我们开发者执行nextTick后要运行的内容。
 
+于是我们知道了，我们调用nextTick时传入的`function () { // DOM updated }`对应的就是return 后边匿名函数的`cb`参数。
+
+#### 执行上下文
+在匿名函数里边，先判断nextTick调用时第二个参数是否填，如果没填就直接将cb函数赋值给func变量。
+```js
+var func = ctx
+  ?
+  function () {
+      cb.call(ctx)
+  }
+  :
+  cb
+```
+如果填了第二个参数，func就等于一个匿名函数，函数内部利用`call`调用cb回调，改变cb内部this指向。由call调用时的传参为ctx可以推导出，nextTick的第二个参数ctx是一个上下文参数，用于改变第一个参数内部的this指向。
+
+#### callbacks队列
+紧接着将func函数推送到callbacks队列中：`callbacks.push(func)`。说明callbacks（也就是`nextTickHandler`函数里的copies）里存的就是nextTick的第一个回调函数参数。for循环执行的也就是他们。
+
+#### pending加锁
+```
+if (pending) return
+```
+利用闭包，判断如果上一个nextTick未执行完毕，则本次的nextTick不能完整执行、会运行到了if这里被中断。
+
+如果pending为false，说明上次的nextTick回调函数已经完了，可以进行本次执行。并紧接着`pending = true`将本次的nextTick调用状态改为pending中。
+
+这pending就好像收费站的栅栏，上一辆车过去后立马落下杆子，上一辆车未缴费完毕、开走之前，不收起杆子。每次起杆子前，都看下是否有上一辆车正在堵着通道在缴费，如果没有，则可以开启杆子，让一辆车过去，放过一辆车后立马又落下杆子阻止后边的车。
+
+#### timerFunc
+最后调用`timerFunc(nextTickHandler, 0)`。
+
+先来看看timerFunc是啥：
+
+立即执行函数里声明后未被初始化
+
+```js
+var timerFunc
+```
+
+紧接着判断MutationObserver可用的话，在if代码块里被赋值为函数：
+```js
+timerFunc = function () {
+  counter = (counter + 1) % 2
+  textNode.data = counter
+}
+```
+函数里修改counter的值并赋值给textNode.data:
+
+这个我们上边分析过，当指定的DOM“textNode”文本节点的文本内容发生变化时，MutationObserver对象的ovserve监听方法就会立即调用回调函数`nextTickHandler`。
+
+于是我们知道了整个流程：timerFunc调用，也就等于nextTickHandler调用，nextTickHandler调用后，内部遍历调用copies的每一项，即遍历调用多个nextTick的第一个函数参数（这是因为pending把下一个nextTick拦住了，不过每次调用nextTick时的第一个回调参数都被push到callbacks里了，当有几个被阻塞的nextTick回调还没被执行的情况下，callbacks数组里就可能不止一个回调函数，因此就需要用for循环依次调用）。
+
+至此，我们的整个流程终于疏通完了。
+
+等等，人家调用`timerFunc`时有传参啊。MutationObserver里给timerFunc赋值时，匿名函数没接收参数啊。
+
+### 优雅降级
+这时我们全局搜索`timerFunc`，发现我们漏了一个else代码块还没看：
+```js
+else {
+  const context = inBrowser ?
+      window :
+      typeof global !== 'undefined' ? global : {}
+  timerFunc = context.setImmediate || setTimeout
+}
+```
+这里，用“inBrowser”判断是否为浏览器环境，然后给context赋值为window/global/{}，
+
+给timerFunc赋值为`context.setImmediate`(ie或者node环境)或者`window.setTimeout`（其他环境），主要看当前运行的环境。
+
+这里是vue的降级处理方式，如果浏览器不支持MutationObserver的话，就用setImmediate，如果不支持setImmediate的话，就用setTimeout来模拟异步方式。
+
+当流程走到else代码块里的话，timerFunc调用就需要传递一个匿名函数（这里为nextTickHandler）和一个interval的值（这里为0）了
 
 <Vssue title="vue-nextTick源码解析" />
 
