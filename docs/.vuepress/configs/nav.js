@@ -142,8 +142,11 @@ module.exports = [
             text: '音乐',
             link: '/hobby/music/'
           }, {
-            text: '电影',
+            text: '影视',
             link: '/hobby/movie/'
+          }, {
+            text: '英语',
+            link: '/hobby/english/'
           }
         ]
       }
