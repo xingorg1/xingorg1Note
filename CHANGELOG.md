@@ -1,8 +1,27 @@
+## V1.6.0 (2020-05-16)
+### Article
+- [+]**English** English Learning readme
+- [+]**English** English Thinking 01
+- [+]**English** 总结与思考
+- [+]**JavaScript** api-jsCourse001
+- [+]**diarys** 《躬身入局 吾辈自强》
+- [+]**Movie** 《破产姐妹》台词分享
+
+### Features
+- **sidebar** 修改js菜单栏，分模块处理
+- **sidebar** 修改english菜单栏，分模块处理
+
+### Bug Fixes
+- **diarys** 《反省的重要性》文字修改
+
 ## V1.5.0 (2020-05-14)
 ### Article
-- [+]**English** 英语专辑
 - [#]**Movie** “电影” -> “影视”；
 - [+]**Movie** 破产姐妹
+
+### Features
+- **nav** 英语专辑
+- **sidebar** english菜单栏
 
 ## V1.4.8 (2020-04-27)
 ### Article

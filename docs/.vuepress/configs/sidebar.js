@@ -36,7 +36,15 @@ module.exports = {
       {
         title: 'JavaScript',
         collapsable: true,
-        children: getMenusChildren('../../webNote/js', 'js/')
+        children: [{
+          title: '合集',
+          collapsable: true,
+          children: getMenusChildren('../../webNote/js', 'js/')
+        },{
+          title: '语法',
+          collapsable: true,
+          children: getMenusChildren('../../webNote/js/api', 'js/api/')
+        }]
       },
       {
         title: 'ESMAScript 6',
@@ -163,7 +171,15 @@ module.exports = {
       {
         title: '英语',
         collapsable: true,
-        children: getMenusChildren('../../hobby/english', 'english/')
+        children: [{
+          title: '英语学习',
+          collapsable: true,
+          children: getMenusChildren('../../hobby/english', 'english/')
+        },{
+          title: '英语思维',
+          collapsable: true,
+          children: getMenusChildren('../../hobby/english/englishThinking', 'english/englishThinking/')
+        }]
       }
     ]
   },
