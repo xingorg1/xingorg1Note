@@ -156,9 +156,14 @@ module.exports = {
         children: getMenusChildren('../../hobby/music', 'music/')
       },
       {
-        title: '电影',
+        title: '影视',
         collapsable: true,
         children: getMenusChildren('../../hobby/movie', 'movie/')
+      },
+      {
+        title: '英语',
+        collapsable: true,
+        children: getMenusChildren('../../hobby/english', 'english/')
       }
     ]
   },
