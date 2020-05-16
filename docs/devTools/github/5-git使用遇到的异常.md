@@ -1,6 +1,6 @@
 # 使用git命令遇到的异常及解决
 
-## clone失败 curl 56 
+## clone失败 curl 56
 
 报错具体命令如下：
 
@@ -66,7 +66,7 @@ sudo chmod -R g+ws *
 sudo chgrp -R mygroup *
 git config core.sharedRepository true
 ```
-3、我的做法是，在项目更目录下运行：
+3、我的做法是，在项目根目录下运行：
 ```bash
 cd .git
 sudo chmod -R g+ws *
