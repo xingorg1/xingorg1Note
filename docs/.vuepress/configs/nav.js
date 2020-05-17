@@ -48,6 +48,9 @@ module.exports = [
           text: '编程思维',
           link: '/backEnd/python/thinking/01-problem'
         }, {
+          text: '小练习',
+          link: '/backEnd/python/practice/00-base'
+        }, {
           text: '小游戏',
           link: '/backEnd/python/games/01-KOF'
         }, {

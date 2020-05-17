@@ -4,7 +4,7 @@ Record my ways and my thoughts of learning English.
 
 :rainbow_flag: [englishThinking: Identify objects around you in English](./englishThinking/englishThinking01.md)
 
-:afghanistan:
+:afghanistan: [englishThinking: Repeat phrases you hear native speakers use](./englishThinking/englishThinking02.md)
 
 :aland_islands:
 
