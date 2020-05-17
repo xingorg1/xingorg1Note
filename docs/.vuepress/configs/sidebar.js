@@ -101,6 +101,10 @@ module.exports = {
         collapsable: true,
         children: getMenusChildren('../../backEnd/python/thinking', 'python/thinking/')
       },{
+        title: '小练习',
+        collapsable: true,
+        children: getMenusChildren('../../backEnd/python/practice', 'python/practice/')
+      },{
         title: '小游戏',
         collapsable: true,
         children: getMenusChildren('../../backEnd/python/games', 'python/games/')

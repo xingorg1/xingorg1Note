@@ -1,3 +1,8 @@
+## V1.7.0 (2020-05-17)
+### Article
+- [+]**python** “practice”小练习模块
+- [+]**python** 多篇文章
+
 ## V1.6.0 (2020-05-16)
 ### Article
 - [+]**English** English Learning readme

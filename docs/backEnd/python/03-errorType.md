@@ -12,6 +12,7 @@ G| UnboundLocalError | 作用域错误(局部变量在局部作用域内有定�
 H| AttributeError | 属性错误(某个类调用自己没有的某属性时就会报错)
 I| UnicodeDecodeError | 解码错误（要解码的内容得跟编码时用的编码表不一致就会报错）
 J| FileNotFoundError | 文件找不到错误（读取文件时找不到文件就会报错）
+K| Zero。。 | 除数不能为零
 
 ## A、语法错误：
 
