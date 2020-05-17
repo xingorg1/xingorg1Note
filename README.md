@@ -24,6 +24,13 @@ npm run serve
 npm run build
 ```
 
+发布前没有写入权限的处理：
+```bash
+# 在项目根目录下运行：
+cd .git
+sudo chmod -R g+ws *
+# 输入密码回车,成功后回到项目目录
+```
 自动发布：
 
 ```bash

@@ -1,3 +1,10 @@
+## V1.7.1 （2020-05-18）
+### Article
+- [+]**english** 【英语思维】Repeat phrases you hear native speakers use
+- [+]**python** 【编程思维】如何锻炼变成思维
+- [+]**python** 【小练习】基础知识联系
+- [+]**python** 【小练习】列表各项练习
+
 ## V1.7.0 (2020-05-17)
 ### Article
 - [+]**python** “practice”小练习模块
