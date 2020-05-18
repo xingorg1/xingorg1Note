@@ -6,7 +6,7 @@ Record my ways and my thoughts of learning English.
 
 :afghanistan: [englishThinking: Repeat phrases you hear native speakers use](./englishThinking/englishThinking02.md)
 
-:aland_islands:
+:aland_islands: [englishThinking: Make a situation where you can't escape into your native language](./englishThinking/englishThinking03.md)
 
 :albania:
 
