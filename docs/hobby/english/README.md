@@ -8,7 +8,7 @@ Record my ways and my thoughts of learning English.
 
 :aland_islands: [englishThinking: Make a situation where you can't escape into your native language](./englishThinking/englishThinking03.md)
 
-:albania:
+:albania: [englishThinking: Watch TV and movies in your target language without subtitles](./englishThinking/englishThinking04.md)
 
 :algeria:
 
