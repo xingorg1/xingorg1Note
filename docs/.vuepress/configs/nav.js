@@ -158,14 +158,20 @@ module.exports = [
   {
     text: '关于',
     items: [{
-      text: '关于我',
+      text: '名称由来',
       link: '/about/'
+    }, {
+      text: '我的履历',
+      link: '/about/aboutMe/'
     }, {
       text: '与我联系',
       link: '/about/contact/'
     }, {
       text: '我的博客',
       link: '/about/myblog/'
+    }, {
+      text: '模范灯塔',
+      link: '/about/model/'
     }, {
       text: '博客园',
       link: 'http://www.cnblogs.com/padding1015/'

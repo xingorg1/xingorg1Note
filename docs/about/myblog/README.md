@@ -33,17 +33,17 @@ npm run push "git commit提交文案，不能有空格"
 
 ## 待优化点
 
-:white_check_mark: ~~滚动条与主题插件~~  
-:white_check_mark: ~~sidebar 侧边栏~~  
-:white_check_mark: ~~上下翻页~~  
-:white_check_mark: ~~评论功能~~  
-:white_check_mark: ~~vue 组件支持~~  
-:o: vue 主题模板文件  
-:o: 整体样式美化  
-:o: 全局滚动条美化  
-:o: 阅读进度条  
-:o: ~~返回顶部按钮美化(20200124)~~【需要改动现用插件，放弃】  
-:o: 开发一个vuepress模版插件(20200125)  
+:white_check_mark: ~~滚动条与主题插件~~
+:white_check_mark: ~~sidebar 侧边栏~~
+:white_check_mark: ~~上下翻页~~
+:white_check_mark: ~~评论功能~~
+:white_check_mark: ~~vue 组件支持~~
+:o: vue 主题模板文件
+:o: 整体样式美化
+:o: 全局滚动条美化
+:o: 阅读进度条
+:o: ~~返回顶部按钮美化(20200124)~~【需要改动现用插件，放弃】
+:o: 开发一个vuepress模版插件(20200125)
 
 ## 待改进bug
 :white_check_mark: ~~mac每次运行npm都需要sudo，否则就没权限。怎么去除(20200125)~~
@@ -76,5 +76,8 @@ Please make sure you have the correct access rights
 
 :o: 左侧sidebar的滚动条和代码区的滚动条、样式美化。(20200123)
 
-[最后，填写留言评论，欢迎帮我提bug～]()
+## [CHANGELOG](https://github.com/xingorg1/xingorg1Note/blob/master/CHANGELOG.md)
+
+
+**最后，填写留言评论，欢迎帮我提bug～**
 <Vssue title="【About】我的博客" />

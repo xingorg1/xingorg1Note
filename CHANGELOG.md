@@ -1,3 +1,16 @@
+## V1.8.0 （2020-05-25）
+### Article
+- [+]**model** `灯塔`整理多个优秀网站的地址
+- [#]**nav** 增加nav菜单关于`灯塔`和`我的履历`的配置项
+
+## V1.7.5 （2020-05-20）
+### Article
+- [+]**english** 【英语思维】Don't bring a dictionary to your lesson
+
+## V1.7.4 （2020-05-19）
+### Article
+- [+]**english** 【英语思维】Watch TV and movies in your target language without subtitles
+
 ## V1.7.3 （2020-05-18）
 ### Article
 - [+]**english** 【英语思维】Make a situation where you can't escape into your native language

@@ -1,6 +1,6 @@
-# 我的简历
+# 我的履历
 
-## 关于我
+## 简介
 
 xing.org1^ 小石头，三年前端从业经验。
 
@@ -11,3 +11,5 @@ xing.org1^ 小石头，三年前端从业经验。
 - [公众号](https://xingorg1.github.io/xingorg1Note/images/qdsb_qrcode.gif)
 
 ![公众号](https://xingorg1.github.io/xingorg1Note/images/qdsb_qrcode.gif)
+
+<Vssue title="我的履历" />
