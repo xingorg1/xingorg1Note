@@ -106,20 +106,20 @@ module.exports = [
     ariaLabel: '记录生活',
     items: [
       {
-        text: '文集',
+        text: '爱好',
         items: [
           {
-            text: '日记',
-            link: '/diarys/diary/'
+            text: '绘画',
+            link: '/hobby/painting/'
           }, {
-            text: '感悟随笔',
-            link: '/diarys/essays/'
+            text: '音乐',
+            link: '/hobby/music/'
           }, {
-            text: '创意想法',
-            link: '/diarys/creative/'
+            text: '影视',
+            link: '/hobby/movie/'
           }, {
-            text: '小说',
-            link: '/diarys/novel/'
+            text: '英语',
+            link: '/hobby/english/'
           }
         ]
       },
@@ -136,20 +136,20 @@ module.exports = [
         ]
       },
       {
-        text: '爱好',
+        text: '文集',
         items: [
           {
-            text: '绘画',
-            link: '/hobby/painting/'
+            text: '日记',
+            link: '/diarys/diary/'
           }, {
-            text: '音乐',
-            link: '/hobby/music/'
+            text: '感悟随笔',
+            link: '/diarys/essays/'
           }, {
-            text: '影视',
-            link: '/hobby/movie/'
+            text: '创意想法',
+            link: '/diarys/creative/'
           }, {
-            text: '英语',
-            link: '/hobby/english/'
+            text: '小说',
+            link: '/diarys/novel/'
           }
         ]
       }
