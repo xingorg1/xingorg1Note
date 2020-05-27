@@ -134,6 +134,11 @@ module.exports = {
         children: getMenusChildren('../../diarys/diary', 'diary/')
       },
       {
+        title: '阅读',
+        collapsable: true,
+        children: getMenusChildren('../../diarys/reading', 'reading/')
+      },
+      {
         title: '随笔',
         collapsable: true,
         children: getMenusChildren('../../diarys/essays', 'essays/')

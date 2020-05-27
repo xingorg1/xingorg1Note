@@ -124,6 +124,27 @@ module.exports = [
         ]
       },
       {
+        text: '文集',
+        items: [
+          {
+            text: '日记',
+            link: '/diarys/diary/'
+          }, {
+            text: '阅读',
+            link: '/diarys/reading/'
+          }, {
+            text: '感悟',
+            link: '/diarys/essays/'
+          }, {
+            text: '奇思',
+            link: '/diarys/creative/'
+          }, {
+            text: '小说',
+            link: '/diarys/novel/'
+          }
+        ]
+      },
+      {
         text: '摄影',
         items: [
           {
@@ -132,24 +153,6 @@ module.exports = [
           }, {
             text: '风景',
             link: '/photograph/scenery/'
-          }
-        ]
-      },
-      {
-        text: '文集',
-        items: [
-          {
-            text: '日记',
-            link: '/diarys/diary/'
-          }, {
-            text: '感悟随笔',
-            link: '/diarys/essays/'
-          }, {
-            text: '创意想法',
-            link: '/diarys/creative/'
-          }, {
-            text: '小说',
-            link: '/diarys/novel/'
           }
         ]
       }
