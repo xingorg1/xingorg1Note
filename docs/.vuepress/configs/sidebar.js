@@ -156,7 +156,15 @@ module.exports = {
       {
         title: '阅读',
         collapsable: true,
-        children: getMenusChildren('../../diarys/reading', 'reading/')
+        children: [{
+          title: '假如给我三天光明',
+          collapsable: true,
+          children: getMenusChildren('../../diarys/reading/three_days_to_see', 'reading/three_days_to_see/')
+        },{
+          title: '你不该输在情绪上',
+          collapsable: true,
+          children: getMenusChildren('../../diarys/reading/emotion', 'reading/emotion/')
+        }]
       },
       {
         title: '随笔',
