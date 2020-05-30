@@ -5,7 +5,7 @@ module.exports = [
   //   link: '/'
   // },
   {
-    text: '前端',
+    text: '前端基础',
     items: [{
       text: 'HTTP',
       link: '/webNote/http/'
@@ -22,14 +22,27 @@ module.exports = [
       text: 'ES',
       link: '/webNote/es/'
     }, {
-      text: 'Vue',
-      link: '/webNote/vue/'
-    }, {
-      text: 'React',
-      link: '/webNote/react/'
-    }, {
       text: 'Mobile',
       link: '/webNote/mobile/'
+    }]
+  },
+  {
+    text: '前端进阶',
+    items: [{
+      text: '模块化',
+      link: '/webAdvance/modularity/'
+    }, {
+      text: '包管理器',
+      link: '/webAdvance/packageManager/'
+    }, {
+      text: 'Vue',
+      link: '/webAdvance/vue/'
+    }, {
+      text: 'React',
+      link: '/webAdvance/react/'
+    },  {
+      text: 'TS',
+      link: '/webAdvance/typescript/'
     }]
   },
   {

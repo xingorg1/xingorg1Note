@@ -52,19 +52,39 @@ module.exports = {
         children: getMenusChildren('../../webNote/es', 'es/')
       },
       {
+        title: '移动端',
+        collapsable: true,
+        children: getMenusChildren('../../webNote/mobile', 'mobile/')
+      }
+    ]
+  },
+  getWebAdvanceSidebar(titleName) {
+    return [
+      ['', titleName],
+      {
+        title: '模块化',
+        collapsable: true,
+        children: getMenusChildren('../../webAdvance/modularity', 'modularity/')
+      },
+      {
+        title: '包管理器',
+        collapsable: true,
+        children: getMenusChildren('../../webAdvance/packageManager', 'packageManager/')
+      },
+      {
         title: 'Vue',
         collapsable: true,
-        children: getMenusChildren('../../webNote/vue', 'vue/')
+        children: getMenusChildren('../../webAdvance/vue', 'vue/')
       },
       {
         title: 'React',
         collapsable: true,
-        children: getMenusChildren('../../webNote/react', 'react/')
+        children: getMenusChildren('../../webAdvance/react', 'react/')
       },
       {
-        title: '移动端',
+        title: 'TS',
         collapsable: true,
-        children: getMenusChildren('../../webNote/mobile', 'mobile/')
+        children: getMenusChildren('../../webAdvance/typescript', 'typescript/')
       }
     ]
   },

@@ -1,4 +1,4 @@
-# 学习网站
+# 优秀学习网站
 
 > 一些优秀的网站
 
@@ -9,7 +9,7 @@
 | 名称      | 地址                               | 简介                                                                                                 |
 |-----------|------------------------------------|------------------------------------------------------------------------------------------------------|
 | alligator | [alligator](https://alligator.io/) | Front-End Web Development, Chewed Up Angular 2+, Vue. js, React, Svelte JavaScript, CSS, Node. js... |
-increment|[increment](https://increment.com/frontend/)|This issue of Increment surveys the breadth and depth of frontend development, from its principles, tools, and frameworks to its shifting scope and far-reaching fringes. 
+increment|[increment](https://increment.com/frontend/)|This issue of Increment surveys the breadth and depth of frontend development, from its principles, tools, and frameworks to its shifting scope and far-reaching fringes.
 
 ### 设计
 
