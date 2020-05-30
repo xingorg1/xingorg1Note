@@ -2,13 +2,13 @@
 
 Record my ways and my thoughts of learning English.
 
-:rainbow_flag: [englishThinking: Identify objects around you in English](./englishThinking/englishThinking01.md)
+:rainbow_flag: [englishThinking: Identify objects around you in English](./englishThinking/englishThinking001.md)
 
-:afghanistan: [englishThinking: Repeat phrases you hear native speakers use](./englishThinking/englishThinking02.md)
+:afghanistan: [englishThinking: Repeat phrases you hear native speakers use](./englishThinking/englishThinking002.md)
 
-:aland_islands: [englishThinking: Make a situation where you can't escape into your native language](./englishThinking/englishThinking03.md)
+:aland_islands: [englishThinking: Make a situation where you can't escape into your native language](./englishThinking/englishThinking003.md)
 
-:albania: [englishThinking: Watch TV and movies in your target language without subtitles](./englishThinking/englishThinking04.md)
+:albania: [englishThinking: Watch TV and movies in your target language without subtitles](./englishThinking/englishThinking004.md)
 
 :algeria:
 
