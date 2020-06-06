@@ -1,17 +1,16 @@
-# 
+# Train responses to common questions
 
-> [004] stop translating in your head！(2020-05-21)
->
-> 前期注释：说这话的人是美国人，母语是英语，目标学习语言是日语；对应我们来说，母语是汉语，目标学习语言是英语。他教的学生跟着他学英语。
+> [006] stop translating in your head！(2020-06-07)
 
 
-## 
-> [004] 培养英语思维，不要在脑海中翻译中文了。
+
+## 练习常用问题的回答
+> [006] 培养英语思维，不要在脑海中翻译中文了。
 
 
 ## 官方翻译
-### 
+### Train responses to common questions
 ###
 
 
-<Vssue title="" />
+<Vssue title="Train responses to common questions" />

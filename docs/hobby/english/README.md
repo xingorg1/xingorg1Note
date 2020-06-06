@@ -10,7 +10,7 @@ Record my ways and my thoughts of learning English.
 
 :albania: [englishThinking: Watch TV and movies in your target language without subtitles](./englishThinking/englishThinking004.md)
 
-:algeria:
+:algeria: [Don't bring a dictionary to your lesson](./englishThinking/englishThinking005.md)
 
 :american_samoa:
 
