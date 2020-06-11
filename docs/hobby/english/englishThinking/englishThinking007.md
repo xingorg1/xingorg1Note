@@ -1,16 +1,22 @@
-# 
+# Study with materials that don't provide a translation
 
-> [004] stop translating in your head！
->
-> 前期注释：说这话的人是美国人，母语是英语，目标学习语言是日语；对应我们来说，母语是汉语，目标学习语言是英语。他教的学生跟着他学英语。
+> [007] stop translating in your head！
+
+The next tip is to study with materials that don't provide a translation.
+
+So by this I mean, if you're using worksheets or some kind of textbook of whatever. and it has your target language, the language you're studying, and it has your native language next to it.
+
+While this can be useful I feel that if you can studying your materials, only in your target language, and then simplified explanations for more detailed points also in your target language can be a little bit bitter.
+
+So I should I don't want to say like, you should only study things in your target language and nothing from your native language. Cause of course, like, it can be helpful sometimes to look up a word or to understand, a 
 
 
-## 
-> [004] 培养英语思维，不要在脑海中翻译中文了。
+## 使用没有提供翻译的工具学习
+> [007] 培养英语思维，不要在脑海中翻译中文了。
 
 
 ## 官方翻译
-### 
+###
 ###
 
 

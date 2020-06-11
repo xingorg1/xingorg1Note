@@ -12,7 +12,7 @@ Record my ways and my thoughts of learning English.
 
 :algeria: [Don't bring a dictionary to your lesson](./englishThinking/englishThinking005.md)
 
-:american_samoa:
+:american_samoa: [Train responses to common questions](./englishThinking/englishThinking006.md)
 
 :andorra:
 
