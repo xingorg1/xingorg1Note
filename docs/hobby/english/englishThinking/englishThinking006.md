@@ -4,7 +4,7 @@
 
 Number six is a quick one, I think number six, `hint` number six, I have is just to train responses to common questions.
 
-Train responses to common questions. So for example, a very common question in English is, "hey, how are you?". You should know how to answer this question, just have a ``default response``, "Hey, how are you?", "I'm good!".
+Train responses to common questions. So for example, a very common question in English is, "hey, how are you?". You should know how to answer this question, just have a default response, "Hey, how are you?", "I'm good!".
 
 If it takes you a lone time to answer the question "Hey, how are you?", you need to practice, I think that's a pretty good ``indicator``.
 

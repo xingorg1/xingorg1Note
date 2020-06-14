@@ -10,13 +10,13 @@ Record my ways and my thoughts of learning English.
 
 :albania: [englishThinking: Watch TV and movies in your target language without subtitles](./englishThinking/englishThinking004.md)
 
-:algeria: [Don't bring a dictionary to your lesson](./englishThinking/englishThinking005.md)
+:algeria: [englishThinking: Don't bring a dictionary to your lesson](./englishThinking/englishThinking005.md)
 
-:american_samoa: [Train responses to common questions](./englishThinking/englishThinking006.md)
+:american_samoa: [englishThinking: Train responses to common questions](./englishThinking/englishThinking006.md)
 
-:andorra:
+:andorra: [englishThinking: Study with materials that don't provide a translation](./englishThinking/englishThinking007.md)
 
-:angola:
+:angola: [englishThinking: Study phrases in addition to single vocabulary](./englishThinking/englishThinking008.md)
 
 :anguilla:
 
