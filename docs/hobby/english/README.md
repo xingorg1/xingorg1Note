@@ -2,25 +2,25 @@
 
 Record my ways and my thoughts of learning English.
 
-:rainbow_flag: [englishThinking: Identify objects around you in English](./englishThinking/englishThinking001.md)
+:rainbow_flag: [englishThinking01: Identify objects around you in English](./englishThinking/englishThinking001.md)
 
-:afghanistan: [englishThinking: Repeat phrases you hear native speakers use](./englishThinking/englishThinking002.md)
+:afghanistan: [englishThinking02: Repeat phrases you hear native speakers use](./englishThinking/englishThinking002.md)
 
-:aland_islands: [englishThinking: Make a situation where you can't escape into your native language](./englishThinking/englishThinking003.md)
+:aland_islands: [englishThinking03: Make a situation where you can't escape into your native language](./englishThinking/englishThinking003.md)
 
-:albania: [englishThinking: Watch TV and movies in your target language without subtitles](./englishThinking/englishThinking004.md)
+:albania: [englishThinking04: Watch TV and movies in your target language without subtitles](./englishThinking/englishThinking004.md)
 
-:algeria:
+:algeria: [englishThinking05: Don't bring a dictionary to your lesson](./englishThinking/englishThinking005.md)
 
-:american_samoa:
+:american_samoa: [englishThinking06: Train responses to common questions](./englishThinking/englishThinking006.md)
 
-:andorra:
+:andorra: [englishThinking07: Study with materials that don't provide a translation](./englishThinking/englishThinking007.md)
 
-:angola:
+:angola: [englishThinking08: Study phrases in addition to single vocabulary](./englishThinking/englishThinking008.md)
 
-:anguilla:
+:anguilla: [englishThinking09: Do your daily activities in English(where possible)](./englishThinking/englishThinking009.md)
 
-:antarctica:
+:antarctica: [englishThinking10: Use a leaner's dictionary for new words](./englishThinking/englishThinking010.md)
 
 :antigua_barbuda:
 

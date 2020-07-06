@@ -1,3 +1,15 @@
+## V2. 1. 4 （2020-06-20）
+
+### Article
+
+* [+]**englishThinking** 006-010,五篇整理
+
+## V2. 1. 3 （2020-06-06）
+
+### Article
+
+* [+]**englishThinking** 《Don't bring dictionary to your lesson》
+
 ## V2. 1. 2 （2020-06-05）
 
 ### Article
