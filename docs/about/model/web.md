@@ -29,3 +29,5 @@ increment|[increment](https://increment.com/frontend/)|This issue of Increment s
 | 分类 | 名称         | 地址                                                   | 简介   |
 |-----|--------------|--------------------------------------------------------|--------|
 | 图片 | shutterstock | [免费获取 10 张图片/天](https://www.shutterstock.com/zh/) | 库存图片 |
+| 字体 | 字体天下 | [免费获取 海量商用免费字体](http://www.fonts.net.cn/) | 设计师的福利 |
+| 网页 | UI中国| [UI中国用户体验设计平台](https://www.ui.cn/) | 啥都有，后台多 | 
