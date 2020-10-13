@@ -17,7 +17,7 @@ module.exports = {
   // 主题配置
   themeConfig: {
     // 顶部导航
-    logo: 'https://xingorg1.github.io/xingorg1Note/images/logo.jpg', // 导航栏logo
+    logo: 'https://xingorg1.github.io/xingorg1Note/images/logo.png', // 导航栏logo
     // navbar: false, // 禁用导航栏
     nav: require('./configs/nav'),
     //搜索

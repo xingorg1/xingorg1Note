@@ -21,7 +21,7 @@ features:
     details: 除了技术，还有生活。以前我喜欢将日记写在收藏的本子上，将照片存到qq空间。这次索性全部搜集在这里！
 footer: MIT Licensed | Copyright © 2018-present xing.org1^
 ---
-> **:woman_technologist: 越努力，越幸运。永不放弃，笔直向前。**
+> **:woman_technologist: 认真做好一件事比什么都重要，热爱前端、永不放弃，笔直向前，越努力越幸运。**
 
 <!-- <ClientOnly> -->
   <!-- <Cat /> -->
@@ -30,6 +30,6 @@ footer: MIT Licensed | Copyright © 2018-present xing.org1^
 <!-- # :woman_technologist:小石头的前端学习笔记  -->
 <!-- [[toc]] -->
 
-<!-- ![xing.org1^](./images/logo.jpg) -->
+<!-- ![xing.org1^](./images/logo.png) -->
 
 
