@@ -36,7 +36,7 @@ sudo chmod -R g+ws *
 ```bash
 bash publickey.sh
 
-sudo npm run push "提交的说明文案，注意千万不能有空格"
+sudo npm run push "提交的说明文案，注意千万不能有空格" # 记得带sudo
 ```
 
 [comment]: <> (# 声明：这里边的内容不会被显示出来？)
