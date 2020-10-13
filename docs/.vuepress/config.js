@@ -1,7 +1,7 @@
 const sidebarConf = require('./configs/sidebar')
-console.log(sidebarConf.getBackEndSidebar())
+// console.log(sidebarConf.getBackEndSidebar())
 module.exports = {
-  title: '前端说吧 ', // 设置网站标题
+  title: '前端印记 ', // 设置网站标题
   description: 'xing.org1^ 小石头的前端学习笔记汇总',
   base: '/xingorg1Note/', // 要部署的路径
   dest: './dist', // 打包后的dist存放路径，相对路径从根目录开始
@@ -86,6 +86,30 @@ module.exports = {
     // }
   },
   plugins: [
+    ['vuepress-plugin-helper-live2d', {
+      // 是否开启控制台日志打印(default: false)
+      log: false,
+      live2d: {
+        // 是否启用(关闭请设置为false)(default: true)
+        enable: true,
+        // 模型名称(default: hibiki)>>>取值请参考：
+        // https://github.com/JoeyBling/hexo-theme-yilia-plus/wiki/live2d%E6%A8%A1%E5%9E%8B%E5%8C%85%E5%B1%95%E7%A4%BA
+        model: 'hibiki',
+        display: {
+          position: "right", // 显示位置：left/right(default: 'right')
+          width: 135, // 模型的长度(default: 135)
+          height: 300, // 模型的高度(default: 300)
+          hOffset: 65, //  水平偏移(default: 65)
+          vOffset: 0, //  垂直偏移(default: 0)
+        },
+        mobile: {
+          show: false // 是否在移动设备上显示(default: false)
+        },
+        react: {
+          opacity: 0.8 // 模型透明度(default: 0.8)
+        }
+      }
+    }], // 看板娘
     ['@vuepress/last-updated'], // 最后更新时间
     ['@vuepress/nprogress'], // 进度条
     /* 两个插件只能选一个 */
