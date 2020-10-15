@@ -24,6 +24,9 @@ module.exports = [
     }, {
       text: 'Mobile',
       link: '/webNote/mobile/'
+    }, {
+      text: 'Browser',
+      link: '/webNote/browser/'
     }]
   },
   {

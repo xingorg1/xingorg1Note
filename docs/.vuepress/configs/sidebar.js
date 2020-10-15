@@ -55,6 +55,11 @@ module.exports = {
         title: '移动端',
         collapsable: true,
         children: getMenusChildren('../../webNote/mobile', 'mobile/')
+      },
+      {
+        title: '浏览器',
+        collapsable: true,
+        children: getMenusChildren('../../webNote/browser', 'browser/')
       }
     ]
   },
