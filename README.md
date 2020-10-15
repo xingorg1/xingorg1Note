@@ -34,7 +34,7 @@ sudo chmod -R g+ws *
 自动发布：
 
 ```bash
-bash publickey.sh
+bash publickey.sh # 好麻烦
 
 sudo npm run push "提交的说明文案，注意千万不能有空格" # 记得带sudo
 ```
