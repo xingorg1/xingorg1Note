@@ -12,7 +12,8 @@ G| UnboundLocalError | 作用域错误(局部变量在局部作用域内有定�
 H| AttributeError | 属性错误(某个类调用自己没有的某属性时就会报错)
 I| UnicodeDecodeError | 解码错误（要解码的内容得跟编码时用的编码表不一致就会报错）
 J| FileNotFoundError | 文件找不到错误（读取文件时找不到文件就会报错）
-K| Zero。。 | 除数不能为零
+K| ModuleNotFoundError | 模块导入错误
+-| Zero。。 | 除数不能为零
 
 ## A、语法错误：
 
@@ -488,7 +489,21 @@ openResult = open(site + '17-file.txt','r',encoding='utf-8') # 1、打开
 
 **但是这个例子比较特殊**：路径找不到就报错的前提是: open函数的第二个参数是r、rb、r+、rb+的时候。如果是w和a体系的，就不会报错、并会在该路径下新建同名文件。[详细知识点传送](./17-file.md#open函数)
 
+## K、模块导入错误(模块导入失败):
 
+### `ModuleNotFoundError: No module named 'requests'`
+
+**出错场景：**
+
+没有导入requests库
+
+**解决办法：**
+
+开始菜单选择运行，输入cmd运行，然后cd命令进入到python安装目录下的Scripts文件中，
+
+然后输入`pip install requests`，就好了。
+
+或者 打开Python文件的安装目录，进入Scripts文件中，按住Shift键+鼠标右击
 <!--
 模板：
 ##
