@@ -33,3 +33,4 @@ increment|[increment](https://increment.com/frontend/)|This issue of Increment s
 | 字体 | 字体天下 | [免费获取 海量商用免费字体](http://www.fonts.net.cn/) | 设计师的福利 |
 | 网页 | UI中国| [UI中国用户体验设计平台](https://www.ui.cn/) | 啥都有，后台多 |
 |资源 | 合集| [公号文](https://mp.weixin.qq.com/s/JTYkzY6RjgSEySEOSn-1FQ) | 网站合集整理
+|logo制作|logo神器|[](https://www.logosc.cn/)|付费
