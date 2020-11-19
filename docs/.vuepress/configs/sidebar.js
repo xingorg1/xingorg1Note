@@ -40,10 +40,6 @@ module.exports = {
           title: '合集',
           collapsable: true,
           children: getMenusChildren('../../webNote/js', 'js/')
-        },{
-          title: '语法',
-          collapsable: true,
-          children: getMenusChildren('../../webNote/js/api', 'js/api/')
         }]
       },
       {
