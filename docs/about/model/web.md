@@ -29,6 +29,7 @@ css文档| cssreference | [cssreference](https://cssreference.io/) | 查询不�
 | 字体 | fontspark |[fontspark](https://fontspark.app/) | 为字体选择困难症的用户打造的选择字体的网站，输入文字随机出现字体。
 | 图标 | The Noun Project |[The Noun Project](https://thenounproject.com/) | 提供超过 200 万的icon供使用者免费下载
 插画库| unDraw | [undraw-illustrations](https://undraw.co/illustrations)|1000 个开源扁平矢量插图库，可免费下载并使用。
+在线ps| photopea | [photopea](https://www.photopea.com/) | 一个在线搞ps的工具
 
 
 ## 国内
