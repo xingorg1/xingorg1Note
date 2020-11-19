@@ -9,6 +9,6 @@ ssh-add ~/.ssh/id_rsa
 
 cat  ~/.ssh/id_rsa.pub # （生成密钥）
 
-pbcopy < ~/.ssh/id_rsa.pub # （复制密钥到剪切板）
+pbcopy < ~/.ssh/id_rsa.pub # （复制密钥到剪切板）(win没权限)
 
 ssh -T git@github.com
