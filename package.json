@@ -42,7 +42,7 @@
     "commander": "^2.20.0",
     "esm": "^3.2.25",
     "hexo-helper-live2d": "^3.1.1",
-    "highlight.js": "^9.15.10",
+    "highlight.js": "^10.4.1",
     "live2d-widget": "^3.0.4",
     "vuepress": "^1.0.0",
     "vuepress-plugin-gotop-plus": "^1.0.0",
