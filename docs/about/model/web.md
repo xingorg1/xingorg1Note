@@ -13,6 +13,7 @@
 css动画| Csseffects | [CSSeffectsSnippets](https://emilkowalski.github.io/css-effects-snippets/)|  多种CSS动画，可快速应用到项目中
 css博客| CSS Tricks|[CSS Tricks](https://css-tricks.com/product/mvp-supporter/) | 主要分享使用CSS样式的技巧、经验和教程等。
 css文档| cssreference | [cssreference](https://cssreference.io/) | 查询不熟悉、不常用的属性，深入理解CSS知识
+css渐变| gradienta | [gradienta](https://gradienta.io/) | 182 Carefully Crafted Multicolor Gradients
 
 
 
